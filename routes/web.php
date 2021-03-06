@@ -16,7 +16,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
         Route::get('/', 'homePageController@index');
 
-        Route::post('Message','MessageController@store');
+        Route::get('Message','MessageController@store');
 
 
     });

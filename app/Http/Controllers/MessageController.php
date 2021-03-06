@@ -28,4 +28,8 @@ class MessageController extends Controller
         session()->flash('success','send successfully');
         return redirect()->back();
     }
+    public function AuthRouteAPI(Request $request){
+        return $request->user();
+     }
+    
 }

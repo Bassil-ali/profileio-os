@@ -108,7 +108,7 @@
                             </li>
                             <li ><a  class="active" href="https://www.china.trisoline.com">@lang('site.china_branch')</a>
                             </li>
-                            <li ><a class="active"  href="https://www.china.trisoline.com">@lang('site.torkey')</a>
+                            <li ><a class="active"  href="https://www.turkey.trisoline.com">@lang('site.torkey')</a>
                             </li>
                             <li class="dropdown tasks-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
@@ -139,6 +139,27 @@
                 </div>
             </nav>
         </header>
+
+    
+
+</div>
+</div>
+</div <div class="alert alert-danger" role="alert">
+<strong><center> @include('partials._errors')</center></strong>
+</div></div>
+
+
+@if (session()->has('success'))
+<div class="alert alert-success" role="alert">
+   @if(app()->getLocale() == 'ar' &&  session()->get('success')== 'send successfully')
+
+    <center><p>تم ارسال الرسالة بنجاح</p></center>
+   @else
+   <center><p>{{ session()->get('success') }}</p></center>
+    @endif
+</div>
+@endif
+
       
         <div id="myCarousel" class="carousel slide z-depth-1-half" data-ride="carousel">
             <!-- Indicators -->
@@ -493,10 +514,11 @@
                </div>
             </div></br></br></br>
        
-                <form id="contact-form"  action="Message" method="POST">
+                <form id="contact-form"  action="Message" method="GET">
 
                     {{ csrf_field() }}
-                    {{ method_field('post') }}
+
+                    {{ method_field('GET') }}
                
 
                     <!--Grid column-->
@@ -551,7 +573,7 @@
                 <!--Grid row-->
 
             </form>
-            </div><br>
+            </div><br><br>
             
 
             <div class="text-center">
@@ -560,25 +582,7 @@
             </div>
             <div class="status"></div>
         </div>
-    </br>
-
-            </div>
-        </div>
-    </div <div class="alert alert-danger" role="alert">
-        <strong><center> @include('partials._errors')</center></strong>
-    </div></div>
-
-     
-        @if (session()->has('success'))
-           <div class="alert alert-success" role="alert">
-               @if(app()->getLocale() == 'ar' &&  session()->get('success')== 'send successfully')
-
-                <center><p>تم ارسال الرسالة بنجاح</p></center>
-               @else
-               <center><p>{{ session()->get('success') }}</p></center>
-                @endif
-            </div>
-        @endif
+        <br>
     
        
           
@@ -648,68 +652,7 @@
         </section>
         <!-- End Copyright Section -->
 
-        <div id="back-to-top" class="back-to-top reveal">
-            <img src="{{asset('assets/images/others/up.png')}}" alt="" class="img-responsive">
-        </div>
-
-
-        <!-- Start Switcher Section -->
-        <div class="switcher-box">
-            <a href="#" class="open-switcher show-switcher"><i class="fa fa-cog fa-2x"></i></a>
-            <h4>Style Switcher</h4>
-            <span>Layout Style</span>
-            <select id="layout-style" class="layout-style">
-                <option value="1">Wide</option>
-                <option value="2">Boxed</option>
-            </select>
-            <span>Patterns for Boxed Version</span>
-            <ul class="bg-list">
-                <li>
-                    <a href="#" class="bg1"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg2"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg3"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg4"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg5"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg6"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg7"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg8"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg9"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg10"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg11"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg12"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg13"></a>
-                </li>
-                <li>
-                    <a href="#" class="bg14"></a>
-                </li>
-            </ul>
-        </div>
-        <!-- End Switcher Section -->
-        
+       
         
 
         <!-- all js include start -->
