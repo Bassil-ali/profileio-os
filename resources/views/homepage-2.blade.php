@@ -19,24 +19,6 @@
         </style>
        @endif
 
-       {{-- <style>
-          .branch{
-              
-              margin-top: 30px;
-              height: 0px;
-              border-radius: 3px;
-              margin-right: 3px;
-              background-color: #fe4157;
-          } --}}
-
-       </style>
-     
-     
-
-        <script>
-            var scroll = new SmoothScroll('a[href*="#"]');
-        </script>
-       
        <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css') }}">
 
      
