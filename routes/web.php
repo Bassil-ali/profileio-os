@@ -14,7 +14,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     function () {
 
 
-        Route::get('/homepage', 'homePageController@index');
+        Route::get('/', 'homePageController@index');
 
         Route::post('Message','MessageController@store');
 
@@ -22,7 +22,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     });
 
     
-Route::get('/', function () {
+Route::get('/Dashboard', function () {
     return redirect()->route('dashboard.welcome');
 });
 

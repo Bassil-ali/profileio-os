@@ -31,11 +31,11 @@
 
                 </div><!-- end of box header -->
 
-                <div class="box-body">
+                <div class="box-body table-responsive">
 
                     @if ($services->count() > 0)
 
-                    <table class="table table-hover">
+                    <table class="table">
 
                         <thead>
                         <tr>

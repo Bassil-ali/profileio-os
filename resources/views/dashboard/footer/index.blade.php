@@ -32,10 +32,10 @@
 
                 </div><!-- end of box header -->
 
-                <div class="box-body">
+                <div class="box-body table-responsive">
                     @if ($footers->count() > 0)
 
-                    <table class="table table-hover">
+                    <table class="table table-hover table-responsive">
 
                         <thead>
                         <tr>
@@ -57,7 +57,7 @@
                                 <input id="val" type="hidden" value="{{ $footer->id }}">
                                 <td>{{ $footer->company_name }}</td>
                                 <td>{!! $footer->text !!}</td> 
-                                <td>{{ $footer->address }}</td> 
+                                <td>{!! $footer->address !!}</td> 
                                 <td>{{ $footer->phone }}</td> 
                                 <td>{{ $footer->email }}</td> 
                                 

@@ -44,7 +44,7 @@ return [
     'about_us' => 'ABOUT US',
     'ourwork_us' => 'OUR WORK',
     'china' => 'CHINA',
-    'torki' => 'TORKET',
+    'torki' => 'TORKEY',
     'office_log' => 'OFFICE LOCATION',
     'name-e' => 'your name',
     'email-e' => 'email',

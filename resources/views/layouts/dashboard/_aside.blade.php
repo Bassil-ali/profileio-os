@@ -18,22 +18,22 @@
             
              
 
-                <li><a href="{{ route('dashboard.header.index') }}"><i class="fa fa-th"></i><span>Header</span></a></li>
+                <li><a href="{{ route('dashboard.header.index') }}"><i class="fa fa-th"></i><span>السلايدر</span></a></li>
           
-                <li><a href="{{ route('dashboard.service.index') }}"><i class="fa fa-th"></i><span>Service</span></a></li>
+                <li><a href="{{ route('dashboard.service.index') }}"><i class="fa fa-th"></i><span>الخدمات</span></a></li>
 
-                <li><a href="{{ route('dashboard.ourwork.index') }}"><i class="fa fa-th"></i><span>Our Work</span></a></li>
+                <li><a href="{{ route('dashboard.ourwork.index') }}"><i class="fa fa-th"></i><span>الاعمال</span></a></li>
 
          
-                <li><a href="{{ route('dashboard.about.index') }}"><i class="fa fa-th"></i><span>About Us</span></a></li>
+                <li><a href="{{ route('dashboard.about.index') }}"><i class="fa fa-th"></i><span>معلومات عنا</span></a></li>
 
 
-                <li><a href="{{ route('dashboard.contact.index') }}"><i class="fa fa-th"></i><span>Contact US</span></a></li>
+                <li><a href="{{ route('dashboard.contact.index') }}"><i class="fa fa-th"></i><span>اتصل بنا</span></a></li>
 
-                <li><a href="{{ route('dashboard.message.index') }}"><i class="fa fa-th"></i><span>Messages</span></a></li>
+                <li><a href="{{ route('dashboard.message.index') }}"><i class="fa fa-th"></i><span>الرسائل</span></a></li>
 
            
-                <li><a href="{{ route('dashboard.footer.index') }}"><i class="fa fa-th"></i><span>Footer</span></a></li>
+                <li><a href="{{ route('dashboard.footer.index') }}"><i class="fa fa-th"></i><span>الفوتر</span></a></li>
           
                 <li><a href="{{ route('dashboard.users.index') }}"><i class="fa fa-th"></i><span>المستخدمين</span></a></li>
            

@@ -31,11 +31,11 @@
 
                 </div><!-- end of box header -->
 
-                <div class="box-body">
+                <div class="box-body table-responsive">
                   
                     @if ($contacts->count() > 0)
 
-                    <table class="table table-hover">
+                    <table class="table table-hover table-responsive">
 
                         <thead>
                         <tr>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -7,28 +7,41 @@
         <meta name="author" content="TheShahriyar">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:image" content="{{asset('assets/images/logo/362.png')}}" />
+        <meta property="og:image" content="{{asset('assets/images/logo/logo.png')}}" />
 
         <!-- load google font -->
+        @if (app()->getLocale() == 'ar')
+        <style>
+            body, h1, h2, h3, h4, h5, h6 {
+                font-family: 'Cairo', sans-serif !important;
+            }
+        </style>
+       @endif
+
+       {{-- <style>
+          .branch{
+              
+              margin-top: 30px;
+              height: 0px;
+              border-radius: 3px;
+              margin-right: 3px;
+              background-color: #fe4157;
+          } --}}
+
+       </style>
      
      
 
         <script>
             var scroll = new SmoothScroll('a[href*="#"]');
         </script>
+       
        <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css') }}">
 
      
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i" rel="stylesheet">
         
-        <!-- all stylesheets include start -->
-        {{-- <script>
-           var scroll = new SmoothScroll('a[href*="#"]', {
-	speed: 1000,
-	speedAsDuration: true
-});
-        </script> --}}
-       
+      
        
         
         <link rel="stylesheet" href="{{asset('assets/css/rev_slider/settings.css')}}">
@@ -63,8 +76,6 @@
                         <ul class="social-icons">
                             <li><a target="_blank" href="https://www.facebook.com/Trisoline"><i class="fa fa-facebook"></i></a></li>
                             <li><a target="_blank" href="https://twitter.com/TrisolineGlobal"><i class="fa fa-twitter"></i></a></li>
-                            {{-- <li><a target="_blank" href="#"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li> --}}
                             <li><a target="_blank" href="https://www.linkedin.com/in/trisoline-global-company-ltd-4a2766191"><i class="fa fa-linkedin"></i></a></li>
                             <li><a target="_blank" href="#"><i class="fa fa-dribbble"></i></a></li>
                         </ul>
@@ -96,7 +107,8 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href=""><img alt="" style="width: 100px" src="{{asset('assets/images/logo/362.png')}}"></a>
+                        <br>
+                        <a class="img-responsive" href=""><img alt="" style="width: 100px;margine-top:20px" src="{{asset('assets/images/logo/362.png')}}"></a>
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -104,19 +116,24 @@
                             </li>
                             <li class="drop"><a  data-scroll href="#services">@lang('site.services')</a>
                             </li>
-                            <li class="drop"><a data-scroll href="#ourwork">@lang('site.ourwork')</a>
-                            </li>
                             <li class="drop"><a  data-scroll href="#about">@lang('site.about')</a>
                             </li>
+                            <li class="drop"><a data-scroll href="#ourwork">@lang('site.ourwork')</a>
+                            </li>
+                           
                             <li class="drop"><a  data-scroll href="#contact">@lang('site.contact')</a>
+                            </li>
+                            <li ><a  class="active" href="https://www.china.trisoline.com">@lang('site.china_branch')</a>
+                            </li>
+                            <li ><a class="active"  href="https://www.china.trisoline.com">@lang('site.torkey')</a>
                             </li>
                             <li class="dropdown tasks-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
                                      @if (App::getLocale() == 'ar')
-                                     العربية
+                                     English
                                   
                                     @else
-                                    {{ LaravelLocalization::getCurrentLocaleName() }}
+                                    العربية
                                     
                                     @endif</a>
                                 <ul class="dropdown-menu">
@@ -148,12 +165,9 @@
                 <img style="height: 900px;"  src="{{asset('assets/images/logo/slide.jpeg')}}"  class="img-responsive">
                 <div class="container">
                   <div class="carousel-caption">
-                    <h1>TRISONILE GLOBAL</h1>
+                    <h1  style="color: #fe4157">TRISONILE GLOBAL</h1>
                     <p>Trisoline Global is to connect companies with innovative ideas and products to the world markets. For several years, trisoline global has served the world’s markets; trading and delivering products to countries worldwide. We have excellent communicative approach in ENGLISH, ARABIC TURKEY and CHINESE– giving us a diversity of thinking which we believe translates into a greater understanding of our customers, partners and better and more informed decisions. Every day we use our expertise and logistical networks to distribute products around the world, efficiently and responsibly.</p>
-                    <p><a class="btn btn-lg btn-primary" href="https://www.china.trisoline.com">@lang('site.china_branch')</a>
-                  </p>
-                  <p><a class="btn btn-lg btn-primary" href="https://www.china.trisoline.com">@lang('site.torkey')</a>
-                  </p>
+                   
                   </div>
                 </div>
               </div>
