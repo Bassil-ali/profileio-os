@@ -31,51 +31,51 @@
 
                         @foreach (config('translatable.locales') as $locale)
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . 'عنوان النص')</label>
                                 <input type="text" name="{{ $locale }}[address1]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.النص')</label>
+                                <label>@lang( $locale . '.النص')</label>
                                 <textarea name="{{ $locale }}[text1]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')</label>
                                 <input type="text" name="{{ $locale }}[address2]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.النص')</label>
+                                <label>@lang( $locale . '.النص')</label>
                                 <textarea name="{{ $locale }}[text2]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')</label>
                                 <input type="text" name="{{ $locale }}[address3]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.النص')</label>
+                                <label>@lang( $locale . '.النص')</label>
                                 <textarea name="{{ $locale }}[text3]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')</label>
                                 <input type="text" name="{{ $locale }}[address4]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.النص')</label>
+                                <label>@lang( $locale . '.النص')</label>
                                 <textarea name="{{ $locale }}[text4]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')</label>
                                 <input type="text" name="{{ $locale }}[address5]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.النص')</label>
+                                <label>@lang( $locale . '.النص')</label>
                                 <textarea name="{{ $locale }}[text5]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')</label>
                                 <input type="text" name="{{ $locale }}[address6]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.النص')</label>
+                                <label>@lang( $locale . '.النص')</label>
                                 <textarea name="{{ $locale }}[text6]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
                             </div>
 

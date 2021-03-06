@@ -33,43 +33,43 @@
 
                         @foreach (config('translatable.locales') as $locale)
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . 'عنوان النص')</label>
                                 <input type="text" name="{{ $locale }}[address1]" class="form-control" value="{{ $service->address1}}">
                             </div>
 
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.النص')</label>
+                                <label>@lang( $locale . '.النص')</label>
                                 <textarea name="{{ $locale }}[text1]" class="form-control ckeditor">{{ $service->text1 }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')</label>
                                 <input type="text" name="{{ $locale }}[address2]" class="form-control" value="{{ $service->address2}}">
                             </div>
 
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.النص')</label>
+                                <label>@lang( $locale . '.النص')</label>
                                 <textarea name="{{ $locale }}[text2]" class="form-control ckeditor">{{ $service->text2 }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')</label>
                                 <input type="text" name="{{ $locale }}[address3]" class="form-control" value="{{ $service->address3}}">
                             </div>
 
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.النص')</label>
+                                <label>@lang( $locale . '.النص')</label>
                                 <textarea name="{{ $locale }}[text3]" class="form-control ckeditor">{{ $service->text3 }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')</label>
                                 <input type="text" name="{{ $locale }}[address4]" class="form-control" value="{{ $service->address4}}">
                             </div>
 
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.النص')</label>
+                                <label>@lang( $locale . '.النص')</label>
                                 <textarea name="{{ $locale }}[text4]" class="form-control ckeditor">{{ $service->text4 }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')</label>
                                 <input type="text" name="{{ $locale }}[address5]" class="form-control" value="{{ $service->address5}}">
                             </div>
 

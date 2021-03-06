@@ -33,34 +33,34 @@
                             
 
                             <div class="form-group">
-                                <label>الوصف@lang( $locale . '.description')</label>
+                                <label>الوصف@lang( $locale )</label>
                                 <textarea name="{{ $locale }}[text]" class="form-control ckeditor">{{ old($locale . '.text') }}</textarea>
                             </div>
 
                             <div class="form-group">
-                                <label>الجزء الاول@lang( $locale . '.section_1')</label>
+                                <label>الجزء الاول@lang( $locale )</label>
                                 <input type="text" name="{{ $locale }}[section_1]" class="form-control" value="{{ old($locale . '.section_1') }}">
                             </div>
 
                             <div class="form-group">
-                                <label>الجزء الثاني@lang( $locale . '.section_2')</label>
+                                <label>الجزء الثاني@lang( $locale )</label>
                                 <input type="text" name="{{ $locale }}[section_2]" class="form-control" value="{{ old($locale . '.section_2') }}">
                             </div>
 
                             <div class="form-group">
-                                <label>الجزء الثالث@lang( $locale . '.section_3')</label>
+                                <label>الجزء الثالث@lang( $locale )</label>
                                 <input type="text" name="{{ $locale }}[section_3]" class="form-control" value="{{ old($locale . '.section_3') }}">
                             </div>
                             <div class="form-group">
-                                <label>الجزء الرابع@lang( $locale . '.section_4')</label>
+                                <label>الجزء الرابع@lang( $locale )</label>
                                 <input type="text" name="{{ $locale }}[section_4]" class="form-control" value="{{ old($locale . '.section_4') }}">
                             </div>
                             <div class="form-group">
-                                <label>الجزء الخامس@lang(  $locale . '.section_5')</label>
+                                <label>الجزء الخامس@lang(  $locale )</label>
                                 <input type="text" name="{{ $locale }}[section_5]" class="form-control" value="{{ old($locale . '.section_5') }}">
                             </div>
                             <div class="form-group">
-                                <label>الجزء السادس@lang(  $locale . '.section_6')</label>
+                                <label>الجزء السادس@lang(  $locale )</label>
                                 <input type="text" name="{{ $locale }}[section_6]" class="form-control" value="{{ old($locale . '.section_6') }}">
                             </div>
 

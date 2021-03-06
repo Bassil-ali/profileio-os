@@ -8,6 +8,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:image" content="{{asset('assets/images/logo/logo.png')}}" />
+        <meta name="theme-color" content="#fe4157">
 
         <!-- load google font -->
         @if (app()->getLocale() == 'ar')
@@ -162,7 +163,7 @@
             
             <div class="carousel-inner">
             <div class="item active">
-                <img style="height: 900px;"  src="{{asset('assets/images/logo/slide.jpeg')}}"  class="img-responsive">
+                <img style="height: 900px;"  src="{{asset('assets/images/logo/slide.jpeg')}}"  >
                 <div class="container">
                   <div class="carousel-caption">
                     <h1  style="color: #fe4157">TRISONILE GLOBAL</h1>
@@ -173,7 +174,7 @@
               </div>
               @foreach($headers as $header)
               <div class="item">
-                <img style="height: 900px" src="{{ $header->image_path }}"  class="img-responsive">
+                <img style="height: 900px" src="{{ $header->image_path }}"  >
                 <div class="container">
                   <div class="carousel-caption">
                     <h1 style="color: #fe4157" >{{ $header->address }}</h1>

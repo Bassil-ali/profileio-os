@@ -33,36 +33,36 @@
                             
 
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.description')</label>
+                                <label>@lang( $locale . '.الوصف')</label>
                                 <textarea name="{{ $locale }}[address]" class="form-control ckeditor">{{ $contact->address }}</textarea>
                             </div>
 
                             @endforeach
 
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.phone_1')</label>
+                                <label> رقم العاتف الصيني</label>
                                 <input type="text" name="phone_1" class="form-control" value="{{ $contact->phone_1  }}">
                             </div>
 
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.map_1')</label>
+                                <label> الموق الصيني</label>
                                 <input type="text" name="map_1" class="form-control" value="{{ $contact->map_1  }}">
                             </div>
 
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.email_1')</label>
+                                <label>'الايميل الصيني</label>
                                 <input type="email" name="email_1" class="form-control" value="{{ $contact->email_1 }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.phone_2')</label>
+                                <label>رقم الهاتف التركي</label>
                                 <input type="text" name="phone_2" class="form-control" value="{{ $contact->phone_2 }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.map_2')</label>
+                                <label>الموقع التركي</label>
                                 <input type="text" name="map_2" class="form-control" value="{{ $contact->map_2 }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.email_2')</label>
+                                <label>الايميل التركي</label>
                                 <input type="email" name="email_2" class="form-control" value="{{ $contact->email_2 }}">
                             </div>
                         <div class="form-group">

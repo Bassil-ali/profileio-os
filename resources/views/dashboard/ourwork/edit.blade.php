@@ -33,12 +33,12 @@
 
                         @foreach (config('translatable.locales') as $locale)
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.name')</label>
+                                <label>@lang( $locale . '.الاسم')</label>
                                 <input type="text" name="{{ $locale }}[address]" class="form-control" value="{{ $ourwork->address }}">
                             </div>
 
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.description')</label>
+                                <label>@lang( $locale . '.الوصف')</label>
                                 <textarea name="{{ $locale }}[text]" class="form-control ckeditor">{{ $ourwork->text }}</textarea>
                             </div>
 
