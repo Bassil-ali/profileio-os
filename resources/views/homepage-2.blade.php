@@ -95,7 +95,7 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="drop"><a class="active" data-scroll href="#bazinga">@lang('site.home')</a>
+                            <li class="drop"><a  href="">@lang('site.home')</a>
                             </li>
                             <li class="drop"><a  data-scroll href="#services">@lang('site.services')</a>
                             </li>
