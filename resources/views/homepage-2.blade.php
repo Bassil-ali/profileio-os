@@ -7,17 +7,34 @@
         <meta name="author" content="TheShahriyar">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:image" content="{{asset('assets/images/logo/logo.png')}}" />
+       
         <meta name="theme-color" content="#fe4157">
+        <link rel="shortcut icon" href="{{asset('assets/images/logo/362.png')}}">
 
         <!-- load google font -->
         @if (app()->getLocale() == 'ar')
         <style>
-            body, h1, h2, h3, h4, h5, h6 {
-                font-family: 'Cairo', sans-serif !important;
+            body, h1, h2, h3, h4, h5, h6 ,p,a{
+                font-weight: 700;
+                font-family: 'aaa', sans-serif !important;
             }
+          
         </style>
        @endif
+
+       <style>
+           .slid{
+               width: 100%;
+               height: 150px;
+           }
+           .centered {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+           
+           }
+           
+       </style>
 
        <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css') }}">
 
@@ -52,36 +69,13 @@
     <div id="container">
 
         <!-- Start Top Header Section -->
-        <section class="topbar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5">
-                        <ul class="social-icons">
-                            <li><a target="_blank" href="https://www.facebook.com/Trisoline"><i class="fa fa-facebook"></i></a></li>
-                            <li><a target="_blank" href="https://twitter.com/TrisolineGlobal"><i class="fa fa-twitter"></i></a></li>
-                            <li><a target="_blank" href="https://www.linkedin.com/in/trisoline-global-company-ltd-4a2766191"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a target="_blank" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="contact-info text-right">
-                            <li>
-                                @foreach($footers as $footer)
-                                <i class="fa fa-envelope"></i>
-                                <a href="">{{$footer->email}}</a>
-                            </li>@endforeach
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
         <!-- End Top Header Section -->
 
         <!-- Start Header & Navigation Section -->
         <header class="clearfix" id="header">
             <!-- Static navbar -->
-            <nav class="navbar navbar-default">
+            <nav class="navbar navbar-default dark-color">
                  
                 <div class="container">
                     <div class="navbar-header">
@@ -91,24 +85,24 @@
                             <span class="icon-bar"></span>
                         </button>
                         <br>
-                        <a class="img-responsive" href=""><img alt="" style="width: 100px;margine-top:20px" src="{{asset('assets/images/logo/362.png')}}"></a>
+                        <a style="width: 100px" class="img-responsive" href=""><img src="{{asset('assets/images/logo/362.png')}}"></a>
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="drop"><a  href="">@lang('site.home')</a>
                             </li>
-                            <li class="drop"><a  data-scroll href="#services">@lang('site.services')</a>
+                            <li class="drop"><a  data-scroll href="#3services">@lang('site.services')</a>
                             </li>
-                            <li class="drop"><a  data-scroll href="#about">@lang('site.about')</a>
+                            <li class="drop"><a  data-scroll href="#3about">@lang('site.about')</a>
                             </li>
-                            <li class="drop"><a data-scroll href="#ourwork">@lang('site.ourwork')</a>
+                            <li class="drop"><a data-scroll href="#3ourwork">@lang('site.ourwork')</a>
                             </li>
                            
-                            <li class="drop"><a  data-scroll href="#contact">@lang('site.contact')</a>
+                            <li class="drop"><a  data-scroll href="#3contact">@lang('site.contact')</a>
                             </li>
-                            <li ><a  class="active" href="https://www.china.trisoline.com">@lang('site.china_branch')</a>
+                            <li ><a  class="active" href="https://www.china.trisoline.com" target="_blank">@lang('site.china_branch')</a>
                             </li>
-                            <li ><a class="active"  href="https://www.turkey.trisoline.com">@lang('site.torkey')</a>
+                            <li ><a class="active"  href="https://www.turkey.trisoline.com" target="_blank">@lang('site.torkey')</a>
                             </li>
                             <li class="dropdown tasks-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
@@ -142,14 +136,11 @@
 
     
 
-</div>
-</div>
-</div <div class="alert alert-danger" role="alert">
-<strong><center> @include('partials._errors')</center></strong>
-</div></div>
 
 
 @if (session()->has('success'))
+<div class="container">
+<br>
 <div class="alert alert-success" role="alert">
    @if(app()->getLocale() == 'ar' &&  session()->get('success')== 'send successfully')
 
@@ -158,6 +149,7 @@
    <center><p>{{ session()->get('success') }}</p></center>
     @endif
 </div>
+</div>
 @endif
 
       
@@ -165,25 +157,19 @@
             <!-- Indicators -->
             
             <div class="carousel-inner">
-            <div class="item active">
-                <img style="height: 900px;"  src="{{asset('assets/images/logo/slide.jpeg')}}"  >
-                <div class="container">
-                  <div class="carousel-caption">
-                    <h1  style="color: #fe4157">TRISONILE GLOBAL</h1>
-                    <p>Trisoline Global is to connect companies with innovative ideas and products to the world markets. For several years, trisoline global has served the world’s markets; trading and delivering products to countries worldwide. We have excellent communicative approach in ENGLISH, ARABIC TURKEY and CHINESE– giving us a diversity of thinking which we believe translates into a greater understanding of our customers, partners and better and more informed decisions. Every day we use our expertise and logistical networks to distribute products around the world, efficiently and responsibly.</p>
-                   
-                  </div>
-                </div>
-              </div>
+            
               @foreach($headers as $header)
-              <div class="item">
-                <img style="height: 900px" src="{{ $header->image_path }}"  >
-                <div class="container">
-                  <div class="carousel-caption">
+              <div class="item @if($header->id ==1 ) active @endif">
+                <img class="slid" style="height: 100vh; " src="{{ $header->image_path }}"  >
+                <div    class="container">
+                    <center>
+                  <div class="carousel-caption centered">
+                     
                     <h1 style="color: #fe4157" >{{ $header->address }}</h1>
                     <p>{!! $header->text !!}</p>
                     
                   </div>
+                    </center>
                 </div>
               </div>
               @endforeach
@@ -196,16 +182,18 @@
             <a class="right carousel-control" href="#myCarousel" data-slide="next">
               <span class="icon-next"></span>
             </a>  
-          </div>    
+          </div>  
+    </div>  
+    <div ></div>
 
 
         <!-- Start Service Section -->
-        <section class="pad-t100 pad-b70" id="#services" >
+        <section class="pad-t100 pad-b70"  id="3services">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div id="services" class="section-title text-center">
-                            <h3>@lang('site.service_we')</h3>
+                        <div  class="section-title text-center">
+                            <h3 style="font-size: 2em;"  class="title">@lang('site.service_we')</h3>
                         </div>
                     </div>
                 </div>
@@ -216,32 +204,32 @@
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
                                     <a href="#tab1" role="tab" data-toggle="tab" aria-expanded="false">
-                                        <i class="fa fa-joomla"></i>
+                                        <i class="fa fa-ship"></i>
                                     </a>
                                 </li>
                                 <li role="presentation" class="">
                                     <a href="#tab2" role="tab" data-toggle="tab" aria-expanded="false">
-                                        <i class="fa fa-wordpress"></i>
+                                        <i class="fa fa-briefcase"></i>
                                     </a>
                                 </li>
                                 <li role="presentation" class="">
                                     <a href="#tab3" role="tab" data-toggle="tab" aria-expanded="false">
-                                        <i class="fa fa-codepen"></i>
+                                        <i class="fa fa-users"></i>
                                     </a>
                                 </li>
                                 <li role="presentation" class="">
                                     <a href="#tab4" role="tab" data-toggle="tab" aria-expanded="false">
-                                        <i class="fa fa-desktop"></i>
+                                        <i class="fa fa-commenting"></i>
                                     </a>
                                 </li>
                                 <li role="presentation" class="">
                                     <a href="#tab5" role="tab" data-toggle="tab" aria-expanded="false">
-                                        <i class="fa fa-file-code-o"></i>
+                                        <i class="fa fa-handshake-o"></i>
                                     </a>
                                 </li>
                                 <li role="presentation" class="">
                                     <a href="#tab6" role="tab" data-toggle="tab" aria-expanded="true">
-                                        <i class="fa fa-cubes"></i>
+                                        <i class="fa fa-life-ring"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -252,12 +240,15 @@
                                 @foreach($services as $service)
                                 <div role="tabpanel" class="tab-pane active" id="tab1">
                                     <div class="row">
-                                        <div class="col-md-12 col-sm-12">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="template-image mbl-mar-bottom">
+                                                <img style="border-radius: 3px" src="{{asset('uploads/product_images/' . $service->image1)}}" class="img-responsive" alt="Revenue">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
                                             <div class="tab-text">
-                                               
-                                               <center>
-                                                <h3>{{ $service->address1}}</h3>   
-                                                <p style="width: 70%">{!! $service->text1 !!}</p></center>
+                                                <h4>{{ $service->address1}}</h4>
+                                                <p>{!! $service->text1 !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -265,12 +256,15 @@
                                 <!-- Start Tab Content 2 -->
                                 <div role="tabpanel" class="tab-pane" id="tab2">
                                     <div class="row">
-                                        <div class="col-md-12 col-sm-12">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="template-image mbl-mar-bottom">
+                                                <img style="border-radius: 3px" src="{{asset('uploads/product_images/' . $service->image2)}}" class="img-responsive" alt="Revenue">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
                                             <div class="tab-text">
-                                               
-                                               <center>
-                                                <h3>{{ $service->address2}}</h3>     
-                                                <p style="width: 70%">{!! $service->text2 !!}</p></center>
+                                                <h4>{{ $service->address2}}</h4>
+                                                <p>{!! $service->text2 !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -279,12 +273,15 @@
                                
                                 <div role="tabpanel" class="tab-pane" id="tab3">
                                     <div class="row">
-                                        <div class="col-md-12 col-sm-12">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="template-image mbl-mar-bottom">
+                                                <img style="border-radius: 3px" src="{{asset('uploads/product_images/' . $service->image3)}}" class="img-responsive" alt="Revenue">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
                                             <div class="tab-text">
-                                               
-                                               <center>
-                                                <h3>{{ $service->address3}}</h3>     
-                                                <p style="width: 70%">{!! $service->text3 !!}</p></center>
+                                                <h4>{{ $service->address3}}</h4>
+                                                <p>{!! $service->text3 !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -292,12 +289,15 @@
                                 <!-- Start Tab Content 4 -->
                                 <div role="tabpanel" class="tab-pane" id="tab4">
                                     <div class="row">
-                                        <div class="col-md-12 col-sm-12">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="template-image mbl-mar-bottom">
+                                                <img style="border-radius: 3px" src="{{asset('uploads/product_images/' . $service->image4)}}" class="img-responsive" alt="Revenue">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
                                             <div class="tab-text">
-                                               
-                                               <center> 
-                                                <h3>{{ $service->address4}}</h3>     
-                                                <p style="width: 70%">{!! $service->text4!!}</p></center>
+                                                <h4>{{ $service->address4}}</h4>
+                                                <p>{!! $service->text4 !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -305,12 +305,15 @@
                                 <!-- Start Tab Content 5 -->
                                 <div role="tabpanel" class="tab-pane" id="tab5">
                                     <div class="row">
-                                        <div class="col-md-12 col-sm-12">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="template-image mbl-mar-bottom">
+                                                <img style="border-radius: 3px" src="{{asset('uploads/product_images/' . $service->image5)}}" class="img-responsive" alt="Revenue">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
                                             <div class="tab-text">
-                                               
-                                               <center> 
-                                                <h3>{{ $service->address5}}</h3>     
-                                                <p style="width: 70%">{!! $service->text5 !!}</p></center>
+                                                <h4>{{ $service->address5}}</h4>
+                                                <p>{!! $service->text5 !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -319,33 +322,43 @@
                                 <div role="tabpanel" class="tab-pane" id="tab6">
                                     <div class="row">
                                         
-                                        <div class="col-md-12 col-sm-12">
-                                            <div class="tab-text">
-                                               
-                                               <center> 
-                                                <h3>{{ $service->address6}}</h3>     
-                                                <p style="width: 70%">{!! $service->text6 !!}</p></center>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="template-image mbl-mar-bottom">
+                                                <img style="border-radius: 3px" src="{{asset('uploads/product_images/' . $service->image6)}}" class="img-responsive" alt="Revenue">
                                             </div>
                                         </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="tab-text">
+                                                <h4>{{ $service->address6}}</h4>
+                                                <p>{!! $service->text6 !!}</p>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                     @endforeach
+                                   
                                 </div>
+                                <div ></div>
+                            </div>
                                 <!-- End Tab Content 7 -->
                             </div>
 
                         </div>
                     </div>
                 </div>
+                <div id="3about" ></div>
             </div>
         </section>
         <!-- End Service Section -->
         <!-- Start Service Section -->
-         <section class="pad80">
+       
+         <section class="pad80" >
+            
             <div class="container">
                 <div class="row">
                     <div class="col-md-12" >
                         <div class="section-title text-center">
-                            <h3 id="about">@lang('site.about_us')</h3>
+                            <h3 style="font-size: 2em;" >@lang('site.about_us')</h3>
                         </div>
                         @foreach($abouts as $about)
                        <center> <p style="width: 70%">{!! $about->text !!}</p></center>
@@ -398,26 +411,28 @@
                             </li>
                             @endforeach
                         </ul>
+                    </div><div ></div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- End Service Section -->
-        <section class="pad-t100 pad-b70" >
+        <section class="pad-t100 pad-b70"id="3ourwork"  >
             <div class="container">
                 <div class="row">
                     <div class="col-md-12" >
                         <div class="section-title text-center">
-                            <h3 id="ourwork">@lang('site.ourwork_us')</h3>
+                            <h3 style="font-size: 2em;">@lang('site.ourwork_us')</h3>
                         </div>
                     </div>
                 </div>
+                
                 <div class="row">
                     @foreach($ourworks as $ourwork)
                     <div class="col-md-4 col-sm-4">
                         <div class="team-member-1">
-                            <div>
-                                <img class="img-responsive" src="{{ $ourwork->image_path }}" alt="">
+                            <div> 
+                                <img width="100%" style="height: 300px" class="img-responsive" src="{{ $ourwork->image_path }}" alt="">
                             </div>
                             <div class="team-info">
                                 <div class="team-name">{{ $ourwork->address}}</div>
@@ -427,16 +442,38 @@
                         </div>
                         </div>
                         @endforeach
+                      
+                        
+
+                </div>
+               
                     </div>
+                  
+                    
                    
                 </div>
+                <div id="3contact"></div>
+                <br>
+                <br>
+                <br>
+              
+               
+
             </div>
+           
         </section>
+        
+        
+       
+       
+
+        
+        
   
         <!-- Start Team Member Section -->
-        <div class="container" >
+        <div  class="container" >
             <div class="section-title text-center"  >
-            <h3  id="contact" class="text-center text-uppercase">@lang('site.contact')</h3>
+            <h3  style="font-size: 2em;"  class="text-center text-uppercase">@lang('site.contact')</h3>
             </div>
             @foreach($contacts as $contact)
             <center><p style="width: 60%;" class="text-center w-75 m-auto">{!! $contact->address!!}</p></center>
@@ -445,7 +482,7 @@
 
               </br></br>
               <div class="section-title text-center">
-               <h3 class="text-center text-uppercase">@lang('site.china')</h3>
+               <h3  style="font-size: 2em;" class="text-center text-uppercase">@lang('site.china')</h3>
               </div></br>
               <div class="col-sm-12 col-md-6 col-lg-4 my-5">
                 <div class="card border-0">
@@ -482,7 +519,7 @@
 
             </br>
             <div class="section-title text-center"></br>
-             <h3 class="text-center text-uppercase">@lang('site.torki')</h3>
+             <h3  style="font-size: 2em;" class="text-center text-uppercase">@lang('site.torki')</h3>
             </div></br>
             <div class="col-sm-12 col-md-6 col-lg-4 my-5">
               <div class="card border-0">
@@ -512,77 +549,107 @@
                  </div>
                  @endforeach
                </div>
-            </div></br></br></br>
-       
-                <form id="contact-form"  action="Message" method="GET">
-
-                    {{ csrf_field() }}
-
-                    {{ method_field('GET') }}
-               
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <label for="name" class="">@lang('site.name-e')</label>
-                            <input type="text" id="name" name="name" class="form-control">
-                           
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <label for="email" class="" >@lang('site.email-e')</label>
-
-                            <input type="text" id="email" name="email" class="form-control">
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-               
-                <!--Grid row-->
-
-                <!--Grid row-->
-               
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <label for="supject" class="">@lang('site.subject')</label>
-
-                            <input type="text" id="subject" name="supject" class="form-control">
-                        </div>
-                    </div>
-              
-                <!--Grid row-->
-
-                <!--Grid row-->
-               
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-
-                        <div class="md-form">
-                            <label for="message">@lang('site.message')</label>
-
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                        </div>
-
-                    </div>
-              
-                <!--Grid row-->
-
-            </form>
-            </div><br><br>
-            
-
-            <div class="text-center">
-                
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">@lang('site.send_message')</a>
             </div>
-            <div class="status"></div>
-        </div>
-        <br>
+            
+            </div>
+            
+       
+                
+
+<div class="container">
+	<div class="row">
+
+        <form id="contact-form"  action="Message" method="GET">
+
+            {{ csrf_field() }}
+
+            {{ method_field('GET') }}
+       
+
+            <!--Grid column-->
+            <div class="col-md-6">
+                <div class="md-form ">
+                    <br>
+                    
+                    <input type="text" id="name" name="name" class="form-control" placeholder="your name">
+                   
+                </div>
+            </div>
+        </br>
+
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6">
+                <div class="md-form ">
+                  
+
+                    <input type="text" id="email" name="email" class="form-control" placeholder="email">
+                </div>
+            </div>
+        </br>
+            
+          
+            <!--Grid column-->
+
+       
+        <!--Grid row-->
+
+        <!--Grid row-->
+       
+            <div class="col-md-6">
+                <div class="md-form mb-0">
+                    <br>
+                    
+
+                    <input type="text" id="subject" name="supject" class="form-control" placeholder="subject">
+                </div>
+            </div>
+        </br>
+            
+           
+           
+        <!--Grid row-->
+
+        <!--Grid row-->
+       
+
+            <!--Grid column-->
+            <div class="col-md-6">
+
+                <div class="md-form">
+                    
+
+                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="message"></textarea>
+                </div>
+
+            </div>
+        </br>
+           
+      
+        <!--Grid row-->
+
+    </form>
+    </div><br><br>
+    
+
+    <div class="text-center">
+        
+        
+        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">@lang('site.send_message')</a>
+    </div>
+    <div class="status"></div>
+</div>
+<br>
+
+</div>
+</div>
+</div <div class="alert alert-danger" role="alert">
+<strong><center> @include('partials._errors')</center></strong>
+</div></div>
+
+    </div></div>
+
     
        
           
@@ -687,7 +754,7 @@
 <!-- Get a specific version -->
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 <script>
-	var scroll = new SmoothScroll('a[href*="#"]');
+	var scroll = new SmoothScroll('a[href*="#3"]');
     
 </script>
 

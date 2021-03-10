@@ -37,7 +37,7 @@
 
                             <div class="form-group">
                                 <label>@lang( $locale . 'الوصف')</label>
-                                <textarea name="{{ $locale }}[text]" class="form-control ckeditor">{{ old($locale . '.text') }}</textarea>
+                                <textarea name="{{ $locale }}[text]" class="form-control ">{{ old($locale . '.text') }}</textarea>
                             </div>
 
                         @endforeach

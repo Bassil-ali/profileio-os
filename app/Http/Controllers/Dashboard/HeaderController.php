@@ -58,11 +58,7 @@ class HeaderController extends Controller
 
         if ($request->image) {
 
-            Image::make($request->image)
-            ->resize(null, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })
-            ->save(public_path('uploads/product_images/' . $request->image->hashName()));
+            Image::make($request->image)->save(public_path('uploads/product_images/' . $request->image->hashName()));
 
         $request_data['image'] = $request->image->hashName();
 
@@ -122,11 +118,7 @@ class HeaderController extends Controller
 
         if ($request->image) {
 
-            Image::make($request->image)
-            ->resize(700, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })
-            ->save(public_path('uploads/product_images/' . $request->image->hashName()));
+            Image::make($request->image)->save(public_path('uploads/product_images/' . $request->image->hashName()));
 
         $request_data['image'] = $request->image->hashName();
 

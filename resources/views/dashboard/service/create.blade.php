@@ -31,58 +31,84 @@
 
                         @foreach (config('translatable.locales') as $locale)
                             <div class="form-group">
-                                <label>@lang( $locale . 'عنوان النص')</label>
+                                <label>@lang( $locale . 'عنوان النص')-1</label>
                                 <input type="text" name="{{ $locale }}[address1]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang( $locale . '.النص')</label>
-                                <textarea name="{{ $locale }}[text1]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
+                                <label>@lang( $locale . '.النص')-1</label>
+                                <textarea name="{{ $locale }}[text1]" class="form-control ">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang( $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')-2</label>
                                 <input type="text" name="{{ $locale }}[address2]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang( $locale . '.النص')</label>
-                                <textarea name="{{ $locale }}[text2]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
+                                <label>@lang( $locale . '.النص')-2</label>
+                                <textarea name="{{ $locale }}[text2]" class="form-control ">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang( $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')-3</label>
                                 <input type="text" name="{{ $locale }}[address3]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang( $locale . '.النص')</label>
-                                <textarea name="{{ $locale }}[text3]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
+                                <label>@lang( $locale . '.النص')-3</label>
+                                <textarea name="{{ $locale }}[text3]" class="form-control ">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang( $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')-4</label>
                                 <input type="text" name="{{ $locale }}[address4]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang( $locale . '.النص')</label>
-                                <textarea name="{{ $locale }}[text4]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
+                                <label>@lang( $locale . '.النص')-4</label>
+                                <textarea name="{{ $locale }}[text4]" class="form-control ">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang( $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')-5</label>
                                 <input type="text" name="{{ $locale }}[address5]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang( $locale . '.النص')</label>
-                                <textarea name="{{ $locale }}[text5]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
+                                <label>@lang( $locale . '.النص')-5</label>
+                                <textarea name="{{ $locale }}[text5]" class="form-control ">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>@lang( $locale . '.عنوان النص')</label>
+                                <label>@lang( $locale . '.عنوان النص')-6</label>
                                 <input type="text" name="{{ $locale }}[address6]" class="form-control" value="{{ old($locale . '.name') }}">
                             </div>
                             <div class="form-group">
-                                <label>@lang( $locale . '.النص')</label>
-                                <textarea name="{{ $locale }}[text6]" class="form-control ckeditor">{{ old($locale . '.description') }}</textarea>
+                                <label>@lang( $locale . '.النص')-6</label>
+                                <textarea name="{{ $locale }}[text6]" class="form-control ">{{ old($locale . '.description') }}</textarea>
                             </div>
 
                            
 
 
                         @endforeach
+                        <div class="form-group">
+                            <label>@lang('site.image')1</label>
+                            <input type="file" name="image1" class="form-control image">
+                        </div>
+                        <div class="form-group">
+                            <label>@lang('site.image')2</label>
+                            <input type="file" name="image2" class="form-control image">
+                        </div>
+                        <div class="form-group">
+                            <label>@lang('site.image')3</label>
+                            <input type="file" name="image3" class="form-control image">
+                        </div>
+                        <div class="form-group">
+                            <label>@lang('site.image')4</label>
+                            <input type="file" name="image4" class="form-control image">
+                        </div>
+                        <div class="form-group">
+                            <label>@lang('site.image')5</label>
+                            <input type="file" name="image5" class="form-control image">
+                        </div>
+                        <div class="form-group">
+                            <label>@lang('site.image')6</label>
+                            <input type="file" name="image6" class="form-control image">
+                        </div>
+
+
 
 
                         <div class="form-group">

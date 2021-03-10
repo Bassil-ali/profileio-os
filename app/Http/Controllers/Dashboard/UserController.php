@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\User;
-use Faker\Provider\Image;
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
+use Image;
 
 
 class UserController extends Controller
@@ -100,6 +101,7 @@ class UserController extends Controller
                 Storage::disk('public_uploads')->delete('/user_images/' . $user->image);
 
             }//end of inner if
+           // dd($request->all());
 
             Image::make($request->image)
                 ->resize(300, null, function ($constraint) {

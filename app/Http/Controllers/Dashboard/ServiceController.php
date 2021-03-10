@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 use App\Service;
 use Illuminate\Http\Request;
 
+use Image;
+
 class ServiceController extends Controller
 {
     /**
@@ -57,10 +59,60 @@ class ServiceController extends Controller
            
 
         }//end of  for each
+        $rules += [ 'image1' => 'required'];
+        $rules += ['image2' => 'required'];
+        $rules += ['image3' => 'required'];
+        $rules += ['image4' => 'required'];
+        $rules += ['image5' => 'required'];
+        $rules += ['image5' => 'required'];
+        $rules += ['image6' => 'required'];
 
         $request->validate($rules);
 
+
         $request_data = $request->all();
+
+       
+
+   
+        Image::make($request->image1)->resize(700, null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save(public_path('uploads/product_images/' . $request->image1->hashName()));
+    $request_data['image1'] = $request->image1->hashName();
+    
+    //dd($request->image1->hashName());
+    
+    Image::make($request->image2)->resize(700, null, function ($constraint) {
+        $constraint->aspectRatio();
+    })->save(public_path('uploads/product_images/' . $request->image2->hashName()));
+    $request_data['image2'] = $request->image2->hashName();
+    
+    Image::make($request->image3)->resize(700, null, function ($constraint) {
+        $constraint->aspectRatio();
+    })->save(public_path('uploads/product_images/' . $request->image3->hashName()));
+    $request_data['image3'] = $request->image3->hashName();
+    
+    Image::make($request->image4)->resize(700, null, function ($constraint) {
+        $constraint->aspectRatio();
+    })->save(public_path('uploads/product_images/' . $request->image4->hashName()));
+    $request_data['image4'] = $request->image4->hashName();
+    
+    Image::make($request->image1)->resize(700, null, function ($constraint) {
+        $constraint->aspectRatio();
+    })->save(public_path('uploads/product_images/' . $request->image1->hashName()));
+    $request_data['image1'] = $request->image1->hashName();
+    
+    Image::make($request->image5)->resize(700, null, function ($constraint) {
+        $constraint->aspectRatio();
+    })->save(public_path('uploads/product_images/' . $request->image5->hashName()));
+    $request_data['image5'] = $request->image5->hashName();
+    
+    Image::make($request->image6)->resize(700, null, function ($constraint) {
+        $constraint->aspectRatio();
+    })->save(public_path('uploads/product_images/' . $request->image6->hashName()));
+    $request_data['image6'] = $request->image6->hashName();
+
+       
 
        
         //  dd($request_data);
@@ -124,7 +176,51 @@ class ServiceController extends Controller
 
         $request->validate($rules);
 
+
         $request_data = $request->all();
+
+      //  dd($request->all());
+ Image::make($request->image1)->resize(700, null, function ($constraint) {
+        $constraint->aspectRatio();
+    })->save(public_path('uploads/product_images/' . $request->image1->hashName()));
+$request_data['image1'] = $request->image1->hashName();
+
+//dd($request->image1->hashName());
+
+Image::make($request->image2)->resize(700, null, function ($constraint) {
+    $constraint->aspectRatio();
+})->save(public_path('uploads/product_images/' . $request->image2->hashName()));
+$request_data['image2'] = $request->image2->hashName();
+
+Image::make($request->image3)->resize(700, null, function ($constraint) {
+    $constraint->aspectRatio();
+})->save(public_path('uploads/product_images/' . $request->image3->hashName()));
+$request_data['image3'] = $request->image3->hashName();
+
+Image::make($request->image4)->resize(700, null, function ($constraint) {
+    $constraint->aspectRatio();
+})->save(public_path('uploads/product_images/' . $request->image4->hashName()));
+$request_data['image4'] = $request->image4->hashName();
+
+Image::make($request->image1)->resize(700, null, function ($constraint) {
+    $constraint->aspectRatio();
+})->save(public_path('uploads/product_images/' . $request->image1->hashName()));
+$request_data['image1'] = $request->image1->hashName();
+
+Image::make($request->image5)->resize(700, null, function ($constraint) {
+    $constraint->aspectRatio();
+})->save(public_path('uploads/product_images/' . $request->image5->hashName()));
+$request_data['image5'] = $request->image5->hashName();
+
+Image::make($request->image6)->resize(700, null, function ($constraint) {
+    $constraint->aspectRatio();
+})->save(public_path('uploads/product_images/' . $request->image6->hashName()));
+$request_data['image6'] = $request->image6->hashName();
+
+      
+
+       
+       
 
      
         // dd($service);

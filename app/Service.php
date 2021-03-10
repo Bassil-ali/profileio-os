@@ -12,4 +12,9 @@ class Service extends Model
     
     protected $guarded = [];
     public $translatedAttributes = ['address1','address2','address3','address4','address5','address6','text1','text2','text3','text4','text5','text6',];
+    public function getImagePathAttribute()
+    {
+        return asset('uploads/product_images/' . $this->image1);
+
+    }//end of image path attribute
 }

@@ -42,16 +42,22 @@
                             <th>#</th>
                             <th>عنوان الخدمه 1</th>
                             <th>نص الخدمة 1</th>
+                            <th>الصورة</th>
                             <th>عنوان الخدمه 2</th>
                             <th>نص الخدمة 2</th>
+                            <th>الصورة</th>
                             <th>عنوان الخدمه 3</th>
                             <th>نص الخدمة 3</th>
+                            <th>الصورة</th>
                             <th>عنوان الخدمه 4</th>
                             <th>نص الخدمة 4</th>
+                            <th>الصورة</th>
                             <th>عنوان الخدمه 5</th>
                             <th>نص الخدمة 5</th>
+                            <th>الصورة</th>
                             <th>عنوان الخدمه 6</th>
                             <th>نص الخدمة 6</th>
+                            <th>الصورة</th>
                            
                         
                         </tr>
@@ -63,17 +69,23 @@
                                 <td>{{ $index + 1 }}</td>
                                 <input id="val" type="hidden" value="{{ $service->id }}">
                                 <td>{{ $service->address1 }}</td>
-                                <td>{!! $service->text1 !!}</td>    
+                                <td>{!! $service->text1 !!}</td> 
+                                <td><img src="{{asset('uploads/product_images/' . $service->image1)}}"  class="img-thumbnail" alt=""></td>   
                                 <td>{{ $service->address2 }}</td>
-                                <td>{!! $service->text2 !!}</td>    
+                                <td>{!! $service->text2 !!}</td> 
+                                <td><img src="{{ asset('uploads/product_images/' . $service->image2)}}" style="width: 100px;" class="img-thumbnail" alt=""></td>   
                                 <td>{{ $service->address3 }}</td>
-                                <td>{!! $service->text3 !!}</td>    
+                                <td>{!! $service->text3 !!}</td>  
+                                <td><img src="{{ asset('uploads/product_images/' . $service->image3)}}" style="width: 100px;" class="img-thumbnail" alt=""></td>  
                                 <td>{{ $service->address4 }}</td>
-                                <td>{!! $service->text4 !!}</td>    
+                                <td>{!! $service->text4 !!}</td>   
+                                <td><img src="{{ asset('uploads/product_images/' . $service->image4)}}" style="width: 100px;" class="img-thumbnail" alt=""></td> 
                                 <td>{{ $service->address5 }}</td>
-                                <td>{!! $service->text5 !!}</td>    
+                                <td>{!! $service->text5 !!}</td> 
+                                <td><img src="{{ asset('uploads/product_images/' . $service->image5)}}" style="width: 100px;" class="img-thumbnail" alt=""></td>   
                                 <td>{{ $service->address6 }}</td>
-                                <td>{!! $service->text6 !!}</td>                              
+                                <td>{!! $service->text6 !!}</td> 
+                                <td><img src="{{asset('uploads/product_images/' . $service->image6)}}" style="width: 100px;" class="img-thumbnail" alt=""></td>                             
                                 <td>
                                    
                                         <a href="{{ route('dashboard.service.edit', $service->id) }}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> @lang('site.edit')</a></br></br>
