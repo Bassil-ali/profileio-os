@@ -25,10 +25,10 @@
                 <li><a href="{{ route('dashboard.ourwork.index') }}"><i class="fa fa-th"></i><span>الاعمال</span></a></li>
 
          
-                <li><a href="{{ route('dashboard.about.index') }}"><i class="fa fa-th"></i><span>معلومات عنا</span></a></li>
+                <li><a href="{{ route('dashboard.about.index') }}"><i class="fa fa-th"></i><span>من نحن</span></a></li>
 
 
-                <li><a href="{{ route('dashboard.contact.index') }}"><i class="fa fa-th"></i><span>اتصل بنا</span></a></li>
+                <li><a href="{{ route('dashboard.contact.index') }}"><i class="fa fa-th"></i><span>تواصل معنا</span></a></li>
 
                 <li><a href="{{ route('dashboard.message.index') }}"><i class="fa fa-th"></i><span>الرسائل</span></a></li>
 

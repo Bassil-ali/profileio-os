@@ -7,19 +7,24 @@
         <meta name="author" content="TheShahriyar">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-       
         <meta name="theme-color" content="#fe4157">
         <link rel="shortcut icon" href="{{asset('assets/images/logo/362.png')}}">
 
-        <!-- load google font -->
+
         @if (app()->getLocale() == 'ar')
         <style>
-            body, h1, h2, h3, h4, h5, h6 ,p,a{
-                font-weight: 700;
-                font-family: 'aaa', sans-serif !important;
+
+                @font-face {
+                font-family: 'NotoKufiArabic';
+                font-weight: 400;
+                font-display: swap;
+                src: url('assets/fonts/NotoKufiArabic.woff2') format('woff2');
             }
-          
+            body, h1, h2, h3, h4, h5, h6 ,p,a{
+                font-family: 'NotoKufiArabic';
+            }
         </style>
+
        @endif
 
        <style>
@@ -28,22 +33,17 @@
                height: 150px;
            }
            .centered {
-            position: absolute;
+           
             top: 35%;
-            left: 50%;
-           
+            left: 50%;    
            }
-           
+          .bold{
+            font-weight: 1000;
+          }
        </style>
 
        <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css') }}">
-
-     
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i" rel="stylesheet">
-        
-      
-       
-        
         <link rel="stylesheet" href="{{asset('assets/css/rev_slider/settings.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/rev_slider/layers.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/rev_slider/navigation.css')}}">
@@ -67,12 +67,6 @@
     </head>
     <body>
     <div id="container">
-
-        <!-- Start Top Header Section -->
-       
-        <!-- End Top Header Section -->
-
-        <!-- Start Header & Navigation Section -->
         <header class="clearfix" id="header">
             <!-- Static navbar -->
             <nav class="navbar navbar-default dark-color">
@@ -125,7 +119,6 @@
                                                     </a>
                                                 </li>
                                             @endforeach
-                                        
                                     </li>
                                 </ul>
                             </li>
@@ -133,47 +126,37 @@
                 </div>
             </nav>
         </header>
-
-    
-
-
-
 @if (session()->has('success'))
 <div class="container">
 <br>
 <div class="alert alert-success" role="alert">
    @if(app()->getLocale() == 'ar' &&  session()->get('success')== 'send successfully')
-
     <center><p>تم ارسال الرسالة بنجاح</p></center>
    @else
    <center><p>{{ session()->get('success') }}</p></center>
     @endif
 </div>
 </div>
-@endif
-
-      
+@endif      
         <div id="myCarousel" class="carousel slide z-depth-1-half" data-ride="carousel">
             <!-- Indicators -->
             
             <div class="carousel-inner">
             
               @foreach($headers as $header)
-              <div class="item @if($header->id ==1 ) active @endif">
-                <img class="slid" style="height: 100vh; " src="{{ $header->image_path }}"  >
+              <div class="item   @if($header->id ==1 ) active @endif">
+                <img class="slid ovelflow " style="height: 100vh; " src="{{ $header->image_path }}"  >
                 <div    class="container">
                     <center>
-                  <div class="carousel-caption centered">
+                  <div class="carousel-caption centered text">
                      
                     <h1 style="color: #fe4157" >{{ $header->address }}</h1>
-                    <p>{!! $header->text !!}</p>
-                    
+                    <p class="bold" style="color: rgb(255, 255, 255)">{!! $header->text !!}</p>
                   </div>
                     </center>
                 </div>
               </div>
               @endforeach
-              
             </div>
             <!-- Controls -->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -183,17 +166,16 @@
               <span class="icon-next"></span>
             </a>  
           </div>  
-    </div>  
-    <div ></div>
-
-
-        <!-- Start Service Section -->
+        </div>  
+    <div>
+</div>
+<!-- Start Service Section -->
         <section class="pad-t100 pad-b70"  id="3services">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div  class="section-title text-center">
-                            <h3 style="font-size: 2em;"  class="title">@lang('site.service_we')</h3>
+                            <h3 style="font-size: 1.5em;"  class="title">@lang('site.service_we')</h3>
                         </div>
                     </div>
                 </div>
@@ -349,8 +331,6 @@
                 <div id="3about" ></div>
             </div>
         </section>
-        <!-- End Service Section -->
-        <!-- Start Service Section -->
        
          <section class="pad80" >
             
@@ -358,7 +338,7 @@
                 <div class="row">
                     <div class="col-md-12" >
                         <div class="section-title text-center">
-                            <h3 style="font-size: 2em;" >@lang('site.about_us')</h3>
+                            <h3 style="font-size: 1.5em;" >@lang('site.about_us')</h3>
                         </div>
                         @foreach($abouts as $about)
                        <center> <p style="width: 70%">{!! $about->text !!}</p></center>
@@ -369,43 +349,43 @@
                         <ul class="feature-box">
                             <li>
                                 <div class="feature-2 br text-center">
-                                    <img src="{{asset('assets/images/others/shopping-cart.png')}}" alt="">
-                                    <a href="#"><h4></h4></a>
+                                    <img src="{{asset('assets/images/others/map.png')}}" alt="">
+                                    <a href="#"><h4>{!! $about->address_1 !!}</h4></a>
                                     <p>{!! $about->section_1 !!}</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="feature-2 br text-center">
-                                    <img src="{{asset('assets/images/others/zoom-out.png')}}" alt="">
-                                    <a href="#"><h4></h4></a>
+                                    <img src="{{asset('assets/images/others/map.png')}}" alt="">
+                                    <a href="#"><h4>{!! $about->address_2 !!}</h4></a>
                                     <p>{!! $about->section_2 !!}</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="feature-2 text-center">
-                                    <img src="{{asset('assets/images/others/idea.png')}}" alt="">
-                                    <a href="#"><h4></h4></a>
+                                    <img src="{{asset('assets/images/others/map.png')}}" alt="">
+                                    <a href="#"><h4>{!! $about->address_3 !!}</h4></a>
                                     <p>{!! $about->section_3 !!}</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="feature-2 br bt text-center">
-                                    <img src="{{asset('assets/images/others/bar-chart.png')}}" alt="">
-                                    <a href="#"><h4></h4></a>
+                                    <img src="{{asset('assets/images/others/map.png')}}" alt="">
+                                    <a href="#"><h4>{!! $about->address_4 !!}</h4></a>
                                     <p>{!! $about->section_4 !!}</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="feature-2 br bt text-center">
                                     <img src="{{asset('assets/images/others/map.png')}}" alt="">
-                                    <a href="#"><h4></h4></a>
+                                    <a href="#"><h4>{!! $about->address_5 !!}</h4></a>
                                     <p>{!! $about->section_5 !!}</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="feature-2 bt text-center">
-                                    <img src="{{asset('assets/images/others/chat.png')}}" alt="">
-                                    <a href="#"><h4></h4></a>
+                                    <img src="{{asset('assets/images/others/map.png')}}" alt="">
+                                    <a href="#"><h4>{!! $about->address_6 !!}</h4></a>
                                     <p>{!! $about->section_6 !!}</p>
                                 </div>
                             </li>
@@ -416,17 +396,16 @@
                 </div>
             </div>
         </section>
-        <!-- End Service Section -->
+
         <section class="pad-t100 pad-b70"id="3ourwork"  >
             <div class="container">
                 <div class="row">
                     <div class="col-md-12" >
                         <div class="section-title text-center">
-                            <h3 style="font-size: 2em;">@lang('site.ourwork_us')</h3>
+                            <h3 style="font-size: 1.5em;">@lang('site.ourwork_us')</h3>
                         </div>
                     </div>
                 </div>
-                
                 <div class="row">
                     @foreach($ourworks as $ourwork)
                     <div class="col-md-4 col-sm-4">
@@ -442,53 +421,28 @@
                         </div>
                         </div>
                         @endforeach
-                      
-                        
-
-                </div>
-               
+                      </div>
                     </div>
-                  
-                    
-                   
                 </div>
-                <div id="3contact"></div>
-                <br>
-                <br>
-                <br>
-              
-               
-
+                <div id="3contact"></div><br><br> <br>
             </div>
-           
-        </section>
-        
-        
-       
-       
-
-        
-        
-  
-        <!-- Start Team Member Section -->
+         </section>
         <div  class="container" >
             <div class="section-title text-center"  >
-            <h3  style="font-size: 2em;"  class="text-center text-uppercase">@lang('site.contact')</h3>
+            <h3  style="font-size: 1.5em;"  class="text-center text-uppercase">@lang('site.contact')</h3>
             </div>
             @foreach($contacts as $contact)
             <center><p style="width: 60%;" class="text-center w-75 m-auto">{!! $contact->address!!}</p></center>
-            
             <div class="row ">
-
               </br></br>
               <div class="section-title text-center">
-               <h3  style="font-size: 2em;" class="text-center text-uppercase">@lang('site.china')</h3>
+               <h3  style="font-size: 1.5em;" class="text-center text-uppercase">@lang('site.china')</h3>
               </div></br>
               <div class="col-sm-12 col-md-6 col-lg-4 my-5">
                 <div class="card border-0">
                    <div class="card-body text-center">
                      <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
-                     <h4 class="text-uppercase mb-5">@lang('site.contact')</h4>
+                     <h4 style="font-size: 1.2em;" class="text-uppercase mb-5">@lang('site.contact')</h4>
                      <p>{{ $contact->phone_1 }}</p>
                    </div>
                  </div>
@@ -502,7 +456,6 @@
                    </div>
                  </div>
               </div>
-             
               <div class="col-sm-12 col-md-6 col-lg-4 my-5">
                 <div class="card border-0">
                    <div class="card-body text-center">
@@ -512,14 +465,12 @@
                    </div>
                  </div>
               </div>
-
-              
             </div>
+            <hr style="color: black">
             <div class="row ">
-
             </br>
             <div class="section-title text-center"></br>
-             <h3  style="font-size: 2em;" class="text-center text-uppercase">@lang('site.torki')</h3>
+             <h3  style="font-size: 1.5em;" class="text-center text-uppercase">@lang('site.torki')</h3>
             </div></br>
             <div class="col-sm-12 col-md-6 col-lg-4 my-5">
               <div class="card border-0">
@@ -552,21 +503,15 @@
             </div>
             
             </div>
-            
-       
-                
 
 <div class="container">
 	<div class="row">
-
         <form id="contact-form"  action="Message" method="GET">
 
             {{ csrf_field() }}
 
             {{ method_field('GET') }}
-       
 
-            <!--Grid column-->
             <div class="col-md-6">
                 <div class="md-form ">
                     <br>
@@ -576,88 +521,41 @@
                 </div>
             </div>
         </br>
-
-            <!--Grid column-->
-
-            <!--Grid column-->
             <div class="col-md-6">
                 <div class="md-form ">
-                  
-
                     <input type="text" id="email" name="email" class="form-control" placeholder="email">
                 </div>
             </div>
         </br>
-            
-          
-            <!--Grid column-->
-
-       
-        <!--Grid row-->
-
-        <!--Grid row-->
-       
             <div class="col-md-6">
                 <div class="md-form mb-0">
                     <br>
-                    
-
                     <input type="text" id="subject" name="supject" class="form-control" placeholder="subject">
                 </div>
             </div>
         </br>
-            
-           
-           
-        <!--Grid row-->
-
-        <!--Grid row-->
-       
-
-            <!--Grid column-->
             <div class="col-md-6">
-
                 <div class="md-form">
-                    
-
                     <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="message"></textarea>
                 </div>
-
             </div>
         </br>
-           
-      
-        <!--Grid row-->
-
     </form>
     </div><br><br>
-    
-
     <div class="text-center">
-        
-        
         <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">@lang('site.send_message')</a>
     </div>
     <div class="status"></div>
 </div>
 <br>
-
 </div>
 </div>
 </div <div class="alert alert-danger" role="alert">
 <strong><center> @include('partials._errors')</center></strong>
-</div></div>
-
-    </div></div>
-
-    
-       
-          
-        <!-- End Team Member Section -->
-
-
-
-        <!-- Start Footer & Copyright Section -->
+</div>
+</div>
+</div>
+</div>
         <section class="footer-section pad-t100 pad-b70 parallax" style="background-image: url({{asset('assets/images/bg/bg2.png')}});">
             <div class="container">
                 <div class="row">
@@ -673,15 +571,6 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        {{-- <h4>Useful Links</h4>
-                        <ul>
-                            <li class="menu-active"><a href="#intro">Home</a></li>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-    
-                            <li><a href="#contact">Contact</a></li>
-                        </ul> --}}
                     </div>
                     <div class="col-md-3">
                         <div class="section-title-2">
@@ -693,19 +582,13 @@
                             <ul class="top-social">
                                 <li><a href="https://www.facebook.com/Trisoline" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/TrisolineGlobal" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                {{-- <li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li> --}}
                                 <li><a href="https://www.linkedin.com/in/trisoline-global-company-ltd-4a2766191" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                {{-- <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li> --}}
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End Footer & Copyright Section -->
-
-        <!-- Start  Copyright Section -->
         <section class="copyright-section">
             <div class="container">
                 <div class="row">
@@ -713,17 +596,13 @@
                         <div class="copyright-text text-center">
                             <p> © All Rights Reserved. Developed by <a href="#">TRISONILE GLOBAL</a></p>
                         </div>
+                        <div id="back-to-top" class="back-to-top reveal">
+                            <img src="assets/images/others/up.png" alt="" class="img-responsive">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End Copyright Section -->
-
-       
-        
-
-        <!-- all js include start -->
-        <!-- jquery latest version -->
         <script src="{{asset('assets/js/jquery-3.1.1.min.js')}}"></script>
       
         <!-- bootstrap latest version -->

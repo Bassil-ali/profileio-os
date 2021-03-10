@@ -43,11 +43,17 @@
                         <tr>
                             <th>#</th>
                             <th>النص</th>
+                            <th>عنوان الجزء الاول</th>
                             <th>الجزء الاول</th>
+                            <th>عنوان الجزء الثاني</th>
                             <th>الجزء الثاني</th>
+                            <th>عنوان الجزء الثالث</th>
                             <th>الجزء الثالث</th>
+                            <th>عنوان الجزء الرابع</th>
                             <th>الجزء الرابع</th>
+                            <th>عنوان الجزء الخامس</th>
                             <th>الجزء الخامس</th>
+                            <th>عنوان الجزء السادس</th>
                             <th>الجزء السادس</th>
                            
                         
@@ -60,11 +66,17 @@
                                 <td>{{ $index + 1 }}</td>
                                 <input id="val" type="hidden" value="{{ $about->id }}">
                                 <td>{!! $about->text !!}</td>
+                                <td>{{ $about->address_1 }}</td> 
                                 <td>{{ $about->section_1 }}</td> 
+                                <td>{{ $about->address_2 }}</td> 
                                 <td>{{ $about->section_2 }}</td> 
+                                <td>{{ $about->address_3 }}</td> 
                                 <td>{{ $about->section_3 }}</td> 
+                                <td>{{ $about->address_4 }}</td> 
                                 <td>{{ $about->section_4 }}</td> 
+                                <td>{{ $about->address_5 }}</td> 
                                 <td>{{ $about->section_5 }}</td> 
+                                <td>{{ $about->address_6 }}</td> 
                                 <td>{{ $about->section_6 }}</td> 
                                                               
                                 <td>

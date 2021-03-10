@@ -19,8 +19,14 @@
         <link rel="stylesheet" href="{{ asset('dashboard_files/css/rtl.css') }}">
 
         <style>
-            body, h1, h2, h3, h4, h5, h6 {
-                font-family: 'Cairo', sans-serif !important;
+              @font-face {
+                font-family: 'NotoKufiArabic';
+                font-weight: 400;
+                font-display: swap;
+                src: url('assets/fonts/NotoKufiArabic.woff2') format('woff2');
+            }
+            body, h1, h2, h3, h4, h5, h6 ,p,a{
+                font-family: 'NotoKufiArabic';
             }
         </style>
    

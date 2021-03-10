@@ -49,6 +49,12 @@ class AboutController extends Controller
             $rules += [$locale . '.section_4' => 'required'];
             $rules += [$locale . '.section_5' => 'required'];
             $rules += [$locale . '.section_6' => 'required'];
+            $rules += [$locale . '.address_1' => 'required'];
+            $rules += [$locale . '.address_2' => 'required'];
+            $rules += [$locale . '.address_3' => 'required'];
+            $rules += [$locale . '.address_4' => 'required'];
+            $rules += [$locale . '.address_5' => 'required'];
+            $rules += [$locale . '.address_6' => 'required'];
 
            
 
@@ -109,6 +115,12 @@ class AboutController extends Controller
             $rules += [$locale . '.section_4' => 'required'];
             $rules += [$locale . '.section_5' => 'required'];
             $rules += [$locale . '.section_6' => 'required'];
+            $rules += [$locale . '.address_1' => 'required'];
+            $rules += [$locale . '.address_2' => 'required'];
+            $rules += [$locale . '.address_3' => 'required'];
+            $rules += [$locale . '.address_4' => 'required'];
+            $rules += [$locale . '.address_5' => 'required'];
+            $rules += [$locale . '.address_6' => 'required'];
 
            
 

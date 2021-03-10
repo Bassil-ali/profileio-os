@@ -17,6 +17,13 @@ class CreateAboutTranslationsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('about_id');
             $table->string('text',60000);
+            $table->string('address_1');
+            $table->string('address_2');
+            $table->string('address_3');
+            $table->string('address_4');
+            $table->string('address_5');
+            $table->string('address_6');
+
             $table->string('section_1',60000);
             $table->string('section_2',60000);
             $table->string('section_3',60000);

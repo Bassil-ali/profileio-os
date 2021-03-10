@@ -37,8 +37,18 @@
                         </div>
 
                         <div class="form-group">
+                            <label>عنوان الجزء الاول@lang( $locale )</label>
+                            <input type="text" name="{{ $locale }}[address_1]" class="form-control"  value="{{ $about->address_1 }}">
+                        </div>
+
+                        <div class="form-group">
                             <label>الجزء الاول@lang(  $locale . '.section_1')</label>
                             <input type="text" name="{{ $locale }}[section_1]" class="form-control" value="{{ $about->section_1 }}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>عنوان الجزء الثاني@lang( $locale )</label>
+                            <input type="text" name="{{ $locale }}[address_2]" class="form-control"  value="{{ $about->address_2 }}">
                         </div>
 
                         <div class="form-group">
@@ -47,16 +57,33 @@
                         </div>
 
                         <div class="form-group">
+                            <label>عنوان الجزء الثالث@lang( $locale )</label>
+                            <input type="text" name="{{ $locale }}[address_3]" class="form-control"  value="{{ $about->address_3 }}">
+                        </div>
+                        <div class="form-group">
                             <label>الجزء الثالث@lang(  $locale )</label>
                             <input type="text" name="{{ $locale }}[section_3]" class="form-control" value="{{ $about->section_3 }}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>عنوان الجزء الرابع@lang( $locale )</label>
+                            <input type="text" name="{{ $locale }}[address_4]" class="form-control"  value="{{ $about->address_4 }}">
                         </div>
                         <div class="form-group">
                             <label>الجزء الرابع@lang(  $locale )</label>
                             <input type="text" name="{{ $locale }}[section_4]" class="form-control" value="{{ $about->section_4 }}">
                         </div>
                         <div class="form-group">
+                            <label>عنوان الجزء الخامس@lang( $locale )</label>
+                            <input type="text" name="{{ $locale }}[address_5]" class="form-control"  value="{{ $about->address_5 }}">
+                        </div>
+                        <div class="form-group">
                             <label>الجزء الخامس@lang(  $locale )</label>
                             <input type="text" name="{{ $locale }}[section_5]" class="form-control" value="{{ $about->section_5 }}">
+                        </div>
+                        <div class="form-group">
+                            <label>عنوان الجزء السادس@lang( $locale )</label>
+                            <input type="text" name="{{ $locale }}[address_6]" class="form-control"  value="{{ $about->address_6 }}">
                         </div>
                         <div class="form-group">
                             <label>الجزء السادس@lang( $locale )</label>
