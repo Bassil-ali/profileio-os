@@ -40,6 +40,13 @@
           .bold{
             font-weight: 1000;
           }
+
+          @media only screen and (main-width: 992px) {
+
+            .logo{
+              margin-top: 5px;
+            }
+          }
        </style>
 
        <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css') }}">
@@ -79,7 +86,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <br>
-                        <a style="width: 100px" class="img-responsive" href=""><img src="{{asset('assets/images/logo/362.png')}}"></a>
+                        <img style="vertical-align: super;" width="100px"  src="{{asset('assets/images/logo/362.png')}}">
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -99,28 +106,19 @@
                             <li ><a class="active"  href="https://www.turkey.trisoline.com" target="_blank">@lang('site.torkey')</a>
                             </li>
                             <li class="dropdown tasks-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+                                
                                      @if (App::getLocale() == 'ar')
-                                     English
+                                     <a rel="alternate"  href="{{ LaravelLocalization::getLocalizedURL('en') }}">
+                                        ENGLISH
+                                    </a>
                                   
                                     @else
-                                    العربية
+                                    <a rel="alternate"  href="{{ LaravelLocalization::getLocalizedURL('ar') }}">
+                                     العربية
+                                    </a>
                                     
                                     @endif</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        {{--<!-- inner menu: contains the actual data -->--}}
-                                      
-                                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                                <li>
-                                                    <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                                       
-                                                        {{ $properties['native'] }}
-                                                    </a>
-                                                </li>
-                                            @endforeach
-                                    </li>
-                                </ul>
+                               
                             </li>
                     </div>
                 </div>
@@ -441,8 +439,8 @@
               <div class="col-sm-12 col-md-6 col-lg-4 my-5">
                 <div class="card border-0">
                    <div class="card-body text-center">
-                     <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
-                     <h4 style="font-size: 1.2em;" class="text-uppercase mb-5">@lang('site.contact')</h4>
+                     <i style="margin-bottom: 18px" class="fa fa-phone fa-3x mb-3 " aria-hidden="true"></i>
+                     <h4 style="margin-bottom: 10px" class="text-uppercase mb-5">@lang('site.contact')</h4>
                      <p>{{ $contact->phone_1 }}</p>
                    </div>
                  </div>
@@ -450,8 +448,8 @@
               <div class="col-sm-12 col-md-6 col-lg-4 my-5">
                 <div class="card border-0">
                    <div class="card-body text-center">
-                     <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true"></i>
-                     <h4 class="text-uppercase mb-5">@lang('site.office_log')</h4>
+                     <i style="margin-bottom: 18px" class="fa fa-map-marker fa-3x mb-3" aria-hidden="true"></i>
+                     <h4 style="margin-bottom: 10px" class="text-uppercase mb-5">@lang('site.office_log')</h4>
                     <address>{{ $contact->map_1 }}</address>
                    </div>
                  </div>
@@ -459,8 +457,8 @@
               <div class="col-sm-12 col-md-6 col-lg-4 my-5">
                 <div class="card border-0">
                    <div class="card-body text-center">
-                     <i class="fa fa-globe fa-5x mb-3" aria-hidden="true"></i>
-                     <h4 class="text-uppercase mb-5">@lang('site.email-e')</h4>
+                     <i style="margin-bottom: 18px" class="fa fa-globe fa-3x mb-3" aria-hidden="true"></i>
+                     <h4 style="margin-bottom: 10px" class="text-uppercase mb-5">@lang('site.email-e')</h4>
                      <p>{{ $contact->email_1 }}</p>
                    </div>
                  </div>
@@ -475,8 +473,8 @@
             <div class="col-sm-12 col-md-6 col-lg-4 my-5">
               <div class="card border-0">
                  <div class="card-body text-center">
-                   <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
-                   <h4 class="text-uppercase mb-5">@lang('site.contact')</h4>
+                   <i style="margin-bottom: 18px" class="fa fa-phone fa-3x mb-3" aria-hidden="true"></i>
+                   <h4 style="margin-bottom: 10px" class="text-uppercase mb-5">@lang('site.contact')</h4>
                    <p>{{$contact->phone_2 }}</p>
                  </div>
                </div>
@@ -484,8 +482,8 @@
             <div class="col-sm-12 col-md-6 col-lg-4 my-5">
               <div class="card border-0">
                  <div class="card-body text-center">
-                   <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true"></i>
-                   <h4 class="text-uppercase mb-5">@lang('site.office_log')</h4>
+                   <i style="margin-bottom: 18px" class="fa fa-map-marker fa-3x mb-3" aria-hidden="true"></i>
+                   <h4 style="margin-bottom: 10px" class="text-uppercase mb-5">@lang('site.office_log')</h4>
                   <address>{{$contact->map_2}}</address>
                  </div>
                </div>
@@ -494,8 +492,8 @@
             <div class="col-sm-12 col-md-6 col-lg-4 my-5">
               <div class="card border-0">
                  <div class="card-body text-center">
-                   <i class="fa fa-globe fa-5x mb-3" aria-hidden="true"></i>
-                   <h4 class="text-uppercase mb-5">@lang('site.email-e')</h4>
+                   <i style="margin-bottom: 18px" class="fa fa-globe fa-3x mb-3" aria-hidden="true"></i>
+                   <h4 style="margin-bottom: 10px" class="text-uppercase mb-5">@lang('site.email-e')</h4>
                    <p>{{ $contact->email_2}}</p>
                  </div>
                  @endforeach
@@ -536,7 +534,8 @@
         </br>
             <div class="col-md-6">
                 <div class="md-form">
-                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="message"></textarea>
+                    
+                    <textarea style="margin-top: 8px" type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="message"></textarea>
                 </div>
             </div>
         </br>
@@ -578,6 +577,7 @@
                         </div>
                         <p>{!! $footer->text!!}</p>
                        @endforeach
+                       <br>
                         <div class="footer-social">
                             <ul class="top-social">
                                 <li><a href="https://www.facebook.com/Trisoline" target="_blank"><i class="fa fa-facebook"></i></a></li>
