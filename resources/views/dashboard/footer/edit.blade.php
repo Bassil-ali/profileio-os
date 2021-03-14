@@ -38,12 +38,12 @@
 
                         <div class="form-group">
                             <label>عنوان الشركة@lang( $locale )</label>
-                            <textarea name="{{ $locale }}[address]" class="form-control ">{{ $footer->address }}</textarea>
+                            <input name="{{ $locale }}[address]" rows="5" class="form-control " value="{{ $footer->address }}">
                         </div>
 
                         <div class="form-group">
                             <label>تفاصيل الشركة@lang( $locale )</label>
-                            <textarea name="{{ $locale }}[text]" class="form-control ">{{ $footer->text }}</textarea>
+                            <textarea name="{{ $locale }}[text]" rows="5" class="form-control ">{{ $footer->text }}</textarea>
                         </div>
 
                     @endforeach

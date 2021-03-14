@@ -42,7 +42,7 @@
 
                             <div class="form-group">
                                 <label>تفاصيل الشركة@lang( $locale )</label>
-                                <textarea name="{{ $locale }}[text]" class="form-control "></textarea>
+                                <textarea name="{{ $locale }}[text]" rows="5" class="form-control "></textarea>
                             </div>
 
                         @endforeach

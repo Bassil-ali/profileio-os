@@ -34,7 +34,7 @@
 
                             <div class="form-group">
                                 <label>الوصف@lang( $locale )</label>
-                                <textarea name="{{ $locale }}[text]" class="form-control ">{{ old($locale . '.text') }}</textarea>
+                                <textarea name="{{ $locale }}[text]" rows="5" class="form-control ">{{ old($locale . '.text') }}</textarea>
                             </div>
 
                             <div class="form-group">

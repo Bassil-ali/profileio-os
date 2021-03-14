@@ -36,7 +36,7 @@
                             </div>
                             <div class="form-group">
                                 <label>@lang( $locale . '.النص')-1</label>
-                                <textarea name="{{ $locale }}[text1]" class="form-control ">{{ old($locale . '.description') }}</textarea>
+                                <textarea rows="5" name="{{ $locale }}[text1]" class="form-control ">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>@lang( $locale . '.عنوان النص')-2</label>
@@ -52,7 +52,7 @@
                             </div>
                             <div class="form-group">
                                 <label>@lang( $locale . '.النص')-3</label>
-                                <textarea name="{{ $locale }}[text3]" class="form-control ">{{ old($locale . '.description') }}</textarea>
+                                <textarea rows="5" name="{{ $locale }}[text3]" class="form-control ">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>@lang( $locale . '.عنوان النص')-4</label>
@@ -68,7 +68,7 @@
                             </div>
                             <div class="form-group">
                                 <label>@lang( $locale . '.النص')-5</label>
-                                <textarea name="{{ $locale }}[text5]" class="form-control ">{{ old($locale . '.description') }}</textarea>
+                                <textarea rows="5" name="{{ $locale }}[text5]" class="form-control ">{{ old($locale . '.description') }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>@lang( $locale . '.عنوان النص')-6</label>
@@ -76,7 +76,7 @@
                             </div>
                             <div class="form-group">
                                 <label>@lang( $locale . '.النص')-6</label>
-                                <textarea name="{{ $locale }}[text6]" class="form-control ">{{ old($locale . '.description') }}</textarea>
+                                <textarea rows="5" name="{{ $locale }}[text6]" class="form-control ">{{ old($locale . '.description') }}</textarea>
                             </div>
 
                            

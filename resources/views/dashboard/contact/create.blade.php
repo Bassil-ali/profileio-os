@@ -34,7 +34,7 @@
 
                             <div class="form-group">
                                 <label>العنوان @lang( $locale )</label>
-                                <textarea name="{{ $locale }}[address]" class="form-control ">{{ old($locale . '.address') }}</textarea>
+                                <textarea name="{{ $locale }}[address]" rows="5" class="form-control ">{{ old($locale . '.address') }}</textarea>
                             </div>
 
                      @endforeach

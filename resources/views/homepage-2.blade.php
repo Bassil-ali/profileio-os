@@ -47,9 +47,7 @@
             top: 35%;
             left: 50%;    
            }
-          .bold{
-            font-weight: 1000 !important;
-          }
+          
           .logo{
               margin-top: 20px ;
             float: left !important;

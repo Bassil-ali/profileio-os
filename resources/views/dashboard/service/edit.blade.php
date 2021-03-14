@@ -39,7 +39,7 @@
 
                             <div class="form-group">
                                 <label>@lang( $locale . '.النص')-1</label>
-                                <textarea name="{{ $locale }}[text1]" class="form-control ">{{ $service->text1 }}</textarea>
+                                <textarea rows="5" name="{{ $locale }}[text1]" class="form-control ">{{ $service->text1 }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>@lang( $locale . '.عنوان النص')-2</label>
@@ -48,7 +48,7 @@
 
                             <div class="form-group">
                                 <label>@lang( $locale . '.النص')-2</label>
-                                <textarea name="{{ $locale }}[text2]" class="form-control ">{{ $service->text2 }}</textarea>
+                                <textarea rows="5" name="{{ $locale }}[text2]" class="form-control ">{{ $service->text2 }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>@lang( $locale . '.عنوان النص')-3</label>
@@ -57,7 +57,7 @@
 
                             <div class="form-group">
                                 <label>@lang( $locale . '.النص')-3</label>
-                                <textarea name="{{ $locale }}[text3]" class="form-control ">{{ $service->text3 }}</textarea>
+                                <textarea rows="5" name="{{ $locale }}[text3]" class="form-control ">{{ $service->text3 }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>@lang( $locale . '.عنوان النص')-4</label>
@@ -66,7 +66,7 @@
 
                             <div class="form-group">
                                 <label>@lang( $locale . '.النص')-4</label>
-                                <textarea name="{{ $locale }}[text4]" class="form-control ">{{ $service->text4 }}</textarea>
+                                <textarea rows="5" name="{{ $locale }}[text4]" class="form-control ">{{ $service->text4 }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>@lang( $locale . '.عنوان النص')-5</label>
@@ -75,7 +75,7 @@
 
                             <div class="form-group">
                                 <label>@lang('site.' . $locale . '.النص')-5</label>
-                                <textarea name="{{ $locale }}[text5]" class="form-control ">{{ $service->text5 }}</textarea>
+                                <textarea rows="5" name="{{ $locale }}[text5]" class="form-control ">{{ $service->text5 }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>@lang('site.' . $locale . '.عنوان النص')-6</label>
@@ -84,7 +84,7 @@
 
                             <div class="form-group">
                                 <label>@lang('site.' . $locale . '.النص')-6</label>
-                                <textarea name="{{ $locale }}[text6]" class="form-control ">{{ $service->text6 }}</textarea>
+                                <textarea rows="5" name="{{ $locale }}[text6]" class="form-control ">{{ $service->text6 }}</textarea>
                             </div>
 
                         @endforeach
