@@ -4,10 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>TRISONILE GLOBAL</title>
-        <meta name="author" content="TheShahriyar">
-        <meta name="description" content="">
+        <!--<meta name="author" content="TheShahriyar">-->
+        <meta name="description" content="global import export company">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#fe4157">
+        <!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+        <!--<link rel="stylesheet" href="https://fontawesome.com/releases/v5.10.0/css/all.css" />-->
+
+
         <link rel="shortcut icon" href="{{asset('assets/images/logo/362.png')}}">
 
 
@@ -28,6 +32,12 @@
        @endif
 
        <style>
+
+           .navbar{
+
+            height: 20% !important;
+
+           }
            .slid{
                width: 100%;
                height: 150px;
@@ -38,22 +48,49 @@
             left: 50%;    
            }
           .bold{
-            font-weight: 1000;
+            font-weight: 1000 !important;
+          }
+          .logo{
+              margin-top: 20px ;
+            float: left !important;
           }
 
-          @media only screen and (main-width: 992px) {
+          #myCarousel  .container{
+              
+            transition: .5s ease;
+            opacity: 0.7;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+            background: #000000;
+            height: 100%;
+            width: 100%;
+        }
+        #myCarousel .item center{
+        
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
 
-            .logo{
-              margin-top: 5px;
-            }
-          }
+        }
+        #myCarousel .carousel-caption{
+           position: initial;
+        }
+         #myCarousel .carousel-caption p{line-height:1.5;}
+         #myCarousel .carousel-caption h1{margin-bottom : 1rem;}
        </style>
 
        <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i" rel="stylesheet">
-        <link rel="stylesheet" href="{{asset('assets/css/rev_slider/settings.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/css/rev_slider/layers.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/css/rev_slider/navigation.css')}}">
+       
         <!-- fontawesome css -->
         <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
         <!-- ET Lineicon CSS -->
@@ -70,6 +107,7 @@
         <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
         <!-- responsive css -->
         <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/mobile.css')}}">
         <!-- all stylesheets include end -->
     </head>
     <body>
@@ -85,35 +123,36 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <br>
-                        <img style="vertical-align: super;" width="100px"  src="{{asset('assets/images/logo/362.png')}}">
+                       
+                        <img class="logo" style="vertical-align: super;" width="100px"  src="{{asset('assets/images/logo/362.png')}}">
+
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="drop"><a  href="">@lang('site.home')</a>
+                            <li class="drop"><a class="color"  href="">@lang('site.home')</a>
                             </li>
-                            <li class="drop"><a  data-scroll href="#3services">@lang('site.services')</a>
+                            <li class="drop"><a class="color" data-scroll href="#3services">@lang('site.services')</a>
                             </li>
-                            <li class="drop"><a  data-scroll href="#3about">@lang('site.about')</a>
+                            <li class="drop"><a class="color" data-scroll href="#3about">@lang('site.about')</a>
                             </li>
-                            <li class="drop"><a data-scroll href="#3ourwork">@lang('site.ourwork')</a>
+                            <li class="drop"><a class="color" data-scroll href="#3ourwork">@lang('site.ourwork')</a>
                             </li>
                            
-                            <li class="drop"><a  data-scroll href="#3contact">@lang('site.contact')</a>
+                            <li class="drop"><a class="color"  data-scroll href="#3contact">@lang('site.contact')</a>
                             </li>
-                            <li ><a  class="active" href="https://www.china.trisoline.com" target="_blank">@lang('site.china_branch')</a>
+                            <li ><a  class="active bransh" href="https://www.china.trisoline.com" target="_blank">@lang('site.china_branch')</a>
                             </li>
-                            <li ><a class="active"  href="https://www.turkey.trisoline.com" target="_blank">@lang('site.torkey')</a>
+                            <li ><a class="active bransh"  href="https://www.turkey.trisoline.com" target="_blank">@lang('site.torkey')</a>
                             </li>
                             <li class="dropdown tasks-menu">
                                 
                                      @if (App::getLocale() == 'ar')
-                                     <a rel="alternate"  href="{{ LaravelLocalization::getLocalizedURL('en') }}">
+                                     <a class="color" rel="alternate"  href="{{ LaravelLocalization::getLocalizedURL('en') }}">
                                         ENGLISH
                                     </a>
                                   
                                     @else
-                                    <a rel="alternate"  href="{{ LaravelLocalization::getLocalizedURL('ar') }}">
+                                    <a class="color" rel="alternate"  href="{{ LaravelLocalization::getLocalizedURL('ar') }}">
                                      العربية
                                     </a>
                                     
@@ -142,13 +181,14 @@
             <div class="carousel-inner">
             
               @foreach($headers as $header)
-              <div class="item   @if($header->id ==1 ) active @endif">
-                <img class="slid ovelflow " style="height: 100vh; " src="{{ $header->image_path }}"  >
+              <div class="item shadow   @if($header->id ==1 ) active @endif">
+        <img class="slid ovelflow " style="height: 100vh; " src="{{ $header->image_path }}"  >
+
                 <div    class="container">
                     <center>
-                  <div class="carousel-caption centered text">
+                  <div class="carousel-caption centered text mobile-text-slide">
                      
-                    <h1 style="color: #fe4157" >{{ $header->address }}</h1>
+                    <h1  class="address" style="color: #fe4157" >{{ $header->address }}</h1>
                     <p class="bold" style="color: rgb(255, 255, 255)">{!! $header->text !!}</p>
                   </div>
                     </center>
@@ -184,7 +224,7 @@
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
                                     <a href="#tab1" role="tab" data-toggle="tab" aria-expanded="false">
-                                        <i class="fa fa-ship"></i>
+                                        <i  class="fa fa-ship" aria-hidden="true"></i>
                                     </a>
                                 </li>
                                 <li role="presentation" class="">
@@ -514,28 +554,28 @@
                 <div class="md-form ">
                     <br>
                     
-                    <input type="text" id="name" name="name" class="form-control" placeholder="your name">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="YOUR NAME">
                    
                 </div>
             </div>
         </br>
             <div class="col-md-6">
                 <div class="md-form ">
-                    <input type="text" id="email" name="email" class="form-control" placeholder="email">
+                    <input type="text" id="email" name="email" class="form-control" placeholder="EMAIL">
                 </div>
             </div>
-        </br>
+        
             <div class="col-md-6">
                 <div class="md-form mb-0">
                     <br>
-                    <input type="text" id="subject" name="supject" class="form-control" placeholder="subject">
+                    <input type="text" id="subject" name="supject" class="form-control" placeholder="SUPJECT">
                 </div>
             </div>
         </br>
             <div class="col-md-6">
                 <div class="md-form">
                     
-                    <textarea style="margin-top: 8px" type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="message"></textarea>
+                    <textarea  style="margin-top: 25px" type="text" id="message" name="message" rows="5" class="form-control bgm" placeholder="MESSAGE"></textarea>
                 </div>
             </div>
         </br>
@@ -559,8 +599,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="section-title-2">
-                            <h3>@lang('site.address')</h3>
+                        <div class="">
+                            <img style="log-m" style="vertical-align: super;" width="165px"  src="{{asset('assets/images/logo/362.png')}}">
                         </div>
                         <div class="footer-address">
                             @foreach($footers as $footer)
@@ -612,15 +652,8 @@
         <script src="{{asset('assets/js/rev_slider/jquery.themepunch.tools.min.js')}}"></script>
         <script src="{{asset('assets/js/rev_slider/jquery.themepunch.revolution.min.js')}}"></script>
         
-        <script src="{{asset('assets/js/rev_slider/extensions/revolution.extension.actions.min.js')}}"></script>
-        <script src="{{asset('assets/js/rev_slider/extensions/revolution.extension.carousel.min.js')}}"></script>
-        <script src="{{asset('assets/js/rev_slider/extensions/revolution.extension.kenburn.min.js')}}"></script>
-        <script src="{{asset('assets/js/rev_slider/extensions/revolution.extension.layeranimation.min.js')}}"></script>
-        <script src="{{asset('assets/js/rev_slider/extensions/revolution.extension.migration.min.js')}}"></script>
-        <script src="{{asset('assets/js/rev_slider/extensions/revolution.extension.navigation.min.js')}}"></script>
-        <script src="{{asset('assets/js/rev_slider/extensions/revolution.extension.parallax.min.js')}}"></script>
-        <script src="{{asset('assets/js/rev_slider/extensions/revolution.extension.slideanims.min.js')}}"></script>
-        <script src="{{asset('assets/js/rev_slider/extensions/revolution.extension.video.min.js')}}"></script>
+       
+     
         <!-- revolution slider js files end -->
         <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
