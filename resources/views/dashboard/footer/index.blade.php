@@ -56,7 +56,7 @@
                                 <td>{{ $index + 1 }}</td>
                                 <input id="val" type="hidden" value="{{ $footer->id }}">
                                 <td>{{ $footer->company_name }}</td>
-                                <td>{!! $footer->text !!}</td> 
+                                <td style="width:30%">{!! $footer->text !!}</td> 
                                 <td>{!! $footer->address !!}</td> 
                                 <td>{{ $footer->phone }}</td> 
                                 <td>{{ $footer->email }}</td> 

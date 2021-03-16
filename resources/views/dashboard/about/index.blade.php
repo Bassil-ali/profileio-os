@@ -65,7 +65,7 @@
                             <tr>
                                 <td>{{ $index + 1 }}</td>
                                 <input id="val" type="hidden" value="{{ $about->id }}">
-                                <td>{!! $about->text !!}</td>
+                                <td style="width:30%">{!! $about->text !!}</td>
                                 <td>{{ $about->address_1 }}</td> 
                                 <td>{{ $about->section_1 }}</td> 
                                 <td>{{ $about->address_2 }}</td> 
@@ -81,7 +81,7 @@
                                                               
                                 <td>
                                    
-                                        <a href="{{ route('dashboard.about.edit', $about->id) }}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> @lang('site.edit')</a>
+                                        <a href="{{ route('dashboard.about.edit', $about->id) }}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> @lang('site.edit')</a><br><br>
                                   
                                         <form action="{{ route('dashboard.about.destroy', $about->id) }}" method="post" style="display: inline-block">
                                             {{ csrf_field() }}

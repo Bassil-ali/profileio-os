@@ -1,5 +1,13 @@
 @media screen and (max-width: 767px) {
 
+
+ 
+
+    .navbar-default .navbar-collapse.collapse.in {
+        max-height: 500px; 
+         overflow-y: hidden;
+    }
+
     .section-title-2:after {
        display: none;
     }
@@ -111,5 +119,25 @@
     content: '';
     opacity: 1;
     background: #fe4157;
+}
+
+@media screen and (max-width: 550px) {
+
+   
+    #myCarousel .carousel-caption p{
+       
+
+        height: 10%;
+        font-size: 13px;
+
+    }
+    .slid{
+        height: 50vh !important;
+  }
+  #myCarousel .item center{
+        
+    height: 80%;
+
+}
 }
   }

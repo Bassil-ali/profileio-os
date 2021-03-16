@@ -6,11 +6,11 @@
 
         <section class="content-header">
 
-            <h1>Header</h1>
+            <h1>السلايدر</h1>
 
             <ol class="breadcrumb">
                 <li><a href="{{ route('dashboard.welcome') }}"><i class="fa fa-dashboard"></i> @lang('site.dashboard')</a></li>
-                <li class="active">Header</li>
+                <li class="active">السلايدر</li>
             </ol>
         </section>
 
@@ -35,25 +35,26 @@
 
                     @if ($headers->count() > 0)
 
-                    <table class="table table-hover table-responsive">
+                    <table class="table table-hover ">
 
                         <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>عنوان النص</th>
-                            <th>النص</th>
+                        <tr class="d-flex">
+                            <th  >#</th>
+                            <th >عنوان النص</th>
+                            <th   >النص</th>
                             <th>الصوره</th>
+                            <th ></th>
                         
                         </tr>
                         </thead>
                         
                         <tbody>
                         @foreach ($headers as $index=>$header)
-                            <tr>
+                            <tr class="d-flex">
                                 <td>{{ $index + 1 }}</td>
                                 <td>{{ $header->address }}</td>
-                                <td>{!! $header->text !!}</td>
-                                <td><img src="{{ $header->image_path }}" style="width: 100px"  class="img-thumbnail" alt=""></td>
+                                <td class="col-sm-3" style="width:30%">{!! $header->text !!}</td>
+                                <td><img src="{{ $header->image_path }}" style="width: 400px;!important"  class="img-thumbnail" alt=""></td>
                               
                                 <td>
                                    

@@ -26,7 +26,7 @@
 
                 </div><!-- end of box header -->
 
-                <div class="box-body">
+                <div class="box-body table-responsive">
                     @if ($messages->count() > 0)
 
                     <table class="table table-hover">

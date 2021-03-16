@@ -69,22 +69,22 @@
                                 <td>{{ $index + 1 }}</td>
                                 <input id="val" type="hidden" value="{{ $service->id }}">
                                 <td>{{ $service->address1 }}</td>
-                                <td>{!! $service->text1 !!}</td> 
+                                <td style="width:30%">{!! $service->text1 !!}</td> 
                                 <td><img src="{{asset('uploads/product_images/' . $service->image1)}}"  class="img-thumbnail" alt=""></td>   
                                 <td>{{ $service->address2 }}</td>
-                                <td>{!! $service->text2 !!}</td> 
+                                <td style="width:30%">{!! $service->text2 !!}</td> 
                                 <td><img src="{{ asset('uploads/product_images/' . $service->image2)}}" style="width: 100px;" class="img-thumbnail" alt=""></td>   
                                 <td>{{ $service->address3 }}</td>
-                                <td>{!! $service->text3 !!}</td>  
+                                <td style="width:30%">{!! $service->text3 !!}</td>  
                                 <td><img src="{{ asset('uploads/product_images/' . $service->image3)}}" style="width: 100px;" class="img-thumbnail" alt=""></td>  
                                 <td>{{ $service->address4 }}</td>
-                                <td>{!! $service->text4 !!}</td>   
-                                <td><img src="{{ asset('uploads/product_images/' . $service->image4)}}" style="width: 100px;" class="img-thumbnail" alt=""></td> 
+                                <td style="width:30%">{!! $service->text4 !!}</td>   
+                                <td><img style="width: 300px;!important" src="{{ asset('uploads/product_images/' . $service->image4)}}" style="width: 100px;" class="img-thumbnail" alt=""></td> 
                                 <td>{{ $service->address5 }}</td>
-                                <td>{!! $service->text5 !!}</td> 
+                                <td style="width:30%">{!! $service->text5 !!}</td> 
                                 <td><img src="{{ asset('uploads/product_images/' . $service->image5)}}" style="width: 100px;" class="img-thumbnail" alt=""></td>   
                                 <td>{{ $service->address6 }}</td>
-                                <td>{!! $service->text6 !!}</td> 
+                                <td style="width:30%">{!! $service->text6 !!}</td> 
                                 <td><img src="{{asset('uploads/product_images/' . $service->image6)}}" style="width: 100px;" class="img-thumbnail" alt=""></td>                             
                                 <td>
                                    

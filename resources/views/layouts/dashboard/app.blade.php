@@ -130,22 +130,20 @@
                         </ul>
                     </li>
                     <li class="dropdown tasks-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-flag-o"></i></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                {{--<!-- inner menu: contains the actual data -->--}}
-                                <ul class="menu">
-                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                        <li>
-                                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                                {{ $properties['native'] }}
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                                
+                        @if (App::getLocale() == 'ar')
+                        <a class="color" rel="alternate"  href="{{ LaravelLocalization::getLocalizedURL('en') }}">
+                           ENGLISH
+                       </a>
+                     
+                       @else
+                       <a class="color" rel="alternate"  href="{{ LaravelLocalization::getLocalizedURL('ar') }}">
+                        العربية
+                       </a>
+                       
+                       @endif</a>
+                  
+               </li>
 
                     {{--<!-- Notifications: style can be found in dropdown.less -->--}}
 

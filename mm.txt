@@ -27,3 +27,14 @@ php artisan laratrust:seeder
 composer dump-autoload
 
 $this->call(LaratrustSeeder::class);
+
+
+
+[2:05 pm, 07/03/2021] احمد اياد: FTP Username: main_website@trisoline.com
+FTP server: ftp.trisoline.com
+FTP & explicit FTPS port:  21
+[2:05 pm, 07/03/2021] احمد اياد: password
+[2:05 pm, 07/03/2021] احمد اياد: 
+
+
+123mainwebsite*

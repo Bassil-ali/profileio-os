@@ -57,7 +57,7 @@
                             <tr>
                                 <td>{{ $index + 1 }}</td>
                                 <input id="val" type="hidden" value="{{ $contact->id }}">
-                                <td>{!! $contact->address !!}</td>
+                                <td style="width:30%">{!! $contact->address !!}</td>
                                 <td>{{ $contact->phone_1 }}</td> 
                                 <td>{{ $contact->map_1 }}</td> 
                                 <td>{{ $contact->email_1 }}</td> 

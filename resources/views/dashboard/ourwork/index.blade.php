@@ -51,8 +51,8 @@
                             <tr>
                                 <td>{{ $index + 1 }}</td>
                                 <td>{{ $ourwork->address }}</td>
-                                <td>{!! $ourwork->text !!}</td>
-                                <td><img src="{{ $ourwork->image_path }}" style="width: 100px"  class="img-thumbnail" alt=""></td>
+                                <td style="width:30%">{!! $ourwork->text !!}</td>
+                                <td><img src="{{ $ourwork->image_path }}" style="width: 400px;!important"  class="img-thumbnail" alt=""></td>
                               
                                 <td>
                                    

@@ -78,12 +78,21 @@
             -ms-transform: translate(-50%, -50%);
             text-align: center;
 
+            width: 85%     
+
         }
         #myCarousel .carousel-caption{
            position: initial;
+           width: 100%;
         }
-         #myCarousel .carousel-caption p{line-height:1.5;}
+         #myCarousel .carousel-caption p{line-height:1.5;
+        text-align: justify;
+        
+        
+        }
          #myCarousel .carousel-caption h1{margin-bottom : 1rem;}
+
+        
        </style>
 
        <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css') }}">
@@ -195,12 +204,7 @@
               @endforeach
             </div>
             <!-- Controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-              <span class="icon-prev"></span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-              <span class="icon-next"></span>
-            </a>  
+           
           </div>  
         </div>  
     <div>
